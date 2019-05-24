@@ -1,6 +1,6 @@
 link: 'https://www.drupal.org/sa-contrib-2018-014'
 title: 'CKEditor Upload Image - Critical - Access bypass - SA-CONTRIB-2018-014'
 branches:
-    8.x-1.x: { time: '2018-02-21 00:38:30', versions: ['>=1.0.0', '<1.5.0'] }
+    8.x-1.x: { time: '2018-02-21 00:47:40', versions: ['>=1.0.0', '<1.5.0'] }
 composer-repository: 'https://packages.drupal.org/8'
 reference: 'composer://drupal/ckeditor_uploadimage'

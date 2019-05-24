@@ -1,6 +1,6 @@
 link: 'https://www.drupal.org/sa-contrib-2017-086'
 title: 'Cloud - Critical - CSRF - SA-CONTRIB-2017-086'
 branches:
-    7.x-1.x: { time: '2017-11-29 00:37:52', versions: ['>=1.0.0', '<1.7.0'] }
+    7.x-1.x: { time: '2017-11-29 00:47:39', versions: ['>=1.0.0', '<1.7.0'] }
 composer-repository: 'https://packages.drupal.org/7'
 reference: 'composer://drupal/cloud'

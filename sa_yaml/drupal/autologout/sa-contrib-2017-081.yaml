@@ -1,6 +1,6 @@
 link: 'https://www.drupal.org/sa-contrib-2017-081'
 title: 'Automated Logout - Moderately critical - Cross Site Scripting - SA-CONTRIB-2017-081'
 branches:
-    7.x-4.x: { time: '2017-11-01 00:37:45', versions: ['>=4.0.0', '<4.5.0'] }
+    7.x-4.x: { time: '2017-11-01 00:47:39', versions: ['>=4.0.0', '<4.5.0'] }
 composer-repository: 'https://packages.drupal.org/7'
 reference: 'composer://drupal/autologout'

@@ -1,6 +1,6 @@
 link: 'https://www.drupal.org/sa-contrib-2018-027'
 title: 'SVG Formatter - Critical - Cross Site Scripting - SA-CONTRIB-2018-027'
 branches:
-    8.x-1.x: { time: '2018-05-09 00:38:48', versions: ['>=1.0.0', '<1.06.0'] }
+    8.x-1.x: { time: '2018-05-09 00:47:40', versions: ['>=1.0.0', '<1.06.0'] }
 composer-repository: 'https://packages.drupal.org/8'
 reference: 'composer://drupal/svg_formatter'

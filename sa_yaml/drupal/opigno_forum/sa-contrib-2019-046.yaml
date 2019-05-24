@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2019-046'
+title: 'Opigno forum - Less critical - Access bypass - SA-CONTRIB-2019-046'
+branches:
+    8.x-1.x: { time: '2019-05-15 00:47:42', versions: ['>=1.0.0', '<1.2.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/opigno_forum'
