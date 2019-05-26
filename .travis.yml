@@ -15,4 +15,6 @@ script:
     - sed -i "s/__DIR__.'/__DIR__.'\/..\/../g" sa_yaml/8/validator.php
     - cp vendor/sensiolabs/security-advisories/validator.php sa_yaml/7/
     - sed -i "s/__DIR__.'/__DIR__.'\/..\/../g" sa_yaml/7/validator.php
+    - php sa_yaml/8/validator.php
+    - php sa_yaml/7/validator.php
 
