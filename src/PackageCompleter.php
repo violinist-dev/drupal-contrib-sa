@@ -79,10 +79,16 @@ class PackageCompleter
             unlink($file);
         }
         $composer_name = str_replace('composer://', '', $data['reference']);
-        $dir = __DIR__ . '/../sa_yaml/' . $composer_name;
+        $version = 7;
+        if ($data["composer-repository"] == 'https://packages.drupal.org/8') {
+            $version = 8;
+        }
+        $dir = sprintf('%s/../sa_yaml/%d/%s', __DIR__, $version, $composer_name);
         if (!file_exists($dir)) {
             mkdir($dir, 0700, true);
         }
-        file_put_contents(str_replace('undefined/undefined', $composer_name, $file), Yaml::dump($data));
+        $filename = $dir . '/' . $data['filename'];
+        unset($data['filename']);
+        file_put_contents($filename, Yaml::dump($data));
     }
 }
