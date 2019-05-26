@@ -1,6 +1,0 @@
-link: 'https://www.drupal.org/sa-contrib-2019-050'
-title: 'Menu Item Extras - Moderately critical - Cross Site Request Forgery - SA-CONTRIB-2019-050'
-branches:
-    8.x-2.x: { time: '2019-05-22 00:47:42', versions: ['>=2.0.0', '<2.5.0'] }
-composer-repository: 'https://packages.drupal.org/8'
-reference: 'composer://drupal/menu_item_extras'

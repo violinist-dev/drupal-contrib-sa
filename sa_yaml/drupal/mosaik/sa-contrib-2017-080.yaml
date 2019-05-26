@@ -1,6 +1,0 @@
-link: 'https://www.drupal.org/sa-contrib-2017-080'
-title: 'Mosaik - Moderately critical - Cross-site scripting - SA-CONTRIB-2017-080'
-branches:
-    7.x-1.x: { time: '2017-10-25 00:47:39', versions: ['>=1.0.0', '<1.2.0'] }
-composer-repository: 'https://packages.drupal.org/7'
-reference: 'composer://drupal/mosaik'
