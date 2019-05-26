@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2019-039'
+title: 'AddToAny Share Buttons - Moderately critical - Cross Site Scripting - SA-CONTRIB-2019-039'
+branches:
+    1.11.x: { time: '2019-03-20 14:36:21', versions: ['>=1.0.0', '<1.11.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/addtoany'

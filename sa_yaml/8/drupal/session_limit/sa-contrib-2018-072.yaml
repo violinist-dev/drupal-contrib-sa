@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2018-072'
+title: 'Session Limit - Critical - Insecure Session Management - SA-CONTRIB-2018-072'
+branches:
+    1.0.x: { time: '2018-10-31 14:36:20', versions: ['>=1.0.0', '<1.0.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/session_limit'
