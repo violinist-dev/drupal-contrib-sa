@@ -53,8 +53,10 @@ class PackageCompleter
         $link = $data['link'];
         $details = $this->fetcher->fetchSa($link);
         $composer_name = sprintf('drupal/%s', $details->getName());
+        $version_parts = explode('.', $details->getVersion());
+        $composer_branch = sprintf('%s.%s.x', $version_parts[0], $version_parts[1]);
         $data['branches'] = [
-            $details->getBranch() => [
+            $composer_branch => [
                 'time' => date('Y-m-d H:i:s', $details->getTime()),
                 'versions' => [
                     sprintf('>=%s', $details->getLowestVulnerable()),
