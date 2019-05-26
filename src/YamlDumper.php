@@ -12,6 +12,9 @@ class YamlDumper
         if (!file_exists($dir)) {
             mkdir($dir, 0777, true);
         }
+        if ($package == 'undefined/undefined') {
+            $data['filename'] = $filename;
+        }
         file_put_contents(sprintf('%s/%s', $dir, $filename), Yaml::dump($data));
     }
 }
