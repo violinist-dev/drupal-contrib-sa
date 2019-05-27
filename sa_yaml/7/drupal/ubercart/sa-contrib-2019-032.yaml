@@ -1,6 +1,6 @@
 link: 'https://www.drupal.org/sa-contrib-2019-032'
 title: 'Ubercart - Moderately critical - Cross Site Request Forgery - SA-CONTRIB-2019-032'
 branches:
-    3.12.x: { time: '2019-03-06 14:36:21', versions: ['>=3.0.0', '<3.12.0'] }
+    3.12.x: { time: '2019-03-06 12:00:00', versions: ['>=3.0.0', '<3.12.0'] }
 composer-repository: 'https://packages.drupal.org/7'
 reference: 'composer://drupal/ubercart'

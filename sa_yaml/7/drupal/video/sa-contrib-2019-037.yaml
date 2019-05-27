@@ -1,6 +1,6 @@
 link: 'https://www.drupal.org/sa-contrib-2019-037'
 title: 'Video - Critical - Remote Code Execution - SA-CONTRIB-2019-037'
 branches:
-    2.14.x: { time: '2019-03-13 14:36:21', versions: ['>=2.0.0', '<2.14.0'] }
+    2.14.x: { time: '2019-03-13 12:00:00', versions: ['>=2.0.0', '<2.14.0'] }
 composer-repository: 'https://packages.drupal.org/7'
 reference: 'composer://drupal/video'

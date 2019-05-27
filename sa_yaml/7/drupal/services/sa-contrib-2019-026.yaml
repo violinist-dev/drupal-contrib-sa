@@ -1,6 +1,6 @@
 link: 'https://www.drupal.org/sa-contrib-2019-026'
 title: 'Services - Critical - SQL Injection - SA-CONTRIB-2019-026'
 branches:
-    3.22.x: { time: '2019-02-27 14:36:21', versions: ['>=3.0.0', '<3.22.0'] }
+    3.22.x: { time: '2019-02-27 12:00:00', versions: ['>=3.0.0', '<3.22.0'] }
 composer-repository: 'https://packages.drupal.org/7'
 reference: 'composer://drupal/services'

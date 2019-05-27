@@ -1,6 +1,6 @@
 link: 'https://www.drupal.org/sa-contrib-2019-028'
 title: 'Context - Moderately critical - Cross site scripting - SA-CONTRIB-2019-028'
 branches:
-    3.10.x: { time: '2019-02-27 14:36:21', versions: ['>=3.0.0', '<3.10.0'] }
+    3.10.x: { time: '2019-02-27 12:00:00', versions: ['>=3.0.0', '<3.10.0'] }
 composer-repository: 'https://packages.drupal.org/7'
 reference: 'composer://drupal/context'

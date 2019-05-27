@@ -1,6 +1,6 @@
 link: 'https://www.drupal.org/sa-contrib-2019-042'
 title: 'Module Filter - Moderately critical - Cross site scripting - SA-CONTRIB-2019-042'
 branches:
-    2.2.x: { time: '2019-03-27 14:36:21', versions: ['>=2.0.0', '<2.2.0'] }
+    2.2.x: { time: '2019-03-27 12:00:00', versions: ['>=2.0.0', '<2.2.0'] }
 composer-repository: 'https://packages.drupal.org/7'
 reference: 'composer://drupal/module_filter'

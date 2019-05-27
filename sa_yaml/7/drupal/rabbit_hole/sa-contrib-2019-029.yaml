@@ -1,6 +1,6 @@
 link: 'https://www.drupal.org/sa-contrib-2019-029'
 title: 'Rabbit Hole - Moderately critical - Access bypass - SA-CONTRIB-2019-029'
 branches:
-    2.25.x: { time: '2019-02-27 14:36:21', versions: ['>=2.0.0', '<2.25.0'] }
+    2.25.x: { time: '2019-02-27 12:00:00', versions: ['>=2.0.0', '<2.25.0'] }
 composer-repository: 'https://packages.drupal.org/7'
 reference: 'composer://drupal/rabbit_hole'
