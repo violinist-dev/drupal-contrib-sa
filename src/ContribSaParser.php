@@ -66,6 +66,7 @@ class ContribSaParser
         if ($sa_time_el->count() === 1) {
             $crappy_date = $sa_time_el->text();
             $date = \DateTime::createFromFormat('Y-F-d', $crappy_date);
+            $date->setTime(12, 00, 00);
             return $date->format('U');
         }
         throw new \Exception('No time found');
