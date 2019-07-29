@@ -2,15 +2,28 @@
 
 namespace Violinist\DrupalContribSA;
 
+use GuzzleHttp\Client;
 use Symfony\Component\DomCrawler\Crawler;
 
 class ContribSaParser
 {
     private $crawler;
 
+    /**
+     * @var Client
+     */
+    private $httpClient;
+
+    private $versions = [];
+
     public function __construct(Crawler $crawler)
     {
         $this->crawler = $crawler;
+    }
+
+    public function setHttpClient(Client $client)
+    {
+        $this->httpClient = $client;
     }
 
     public function getProjectName()
@@ -47,12 +60,27 @@ class ContribSaParser
         throw new \Exception('No project name found');
     }
 
-    public function getVersion()
+    public function getVersions()
     {
-        $link = $this->getVersionLink();
-        $parts = explode('/', $link);
-        $version_tag_parts = explode('-', $parts[count($parts) - 1]);
-        return sprintf('%s.0', $version_tag_parts[1]);
+        // @todo: Not even sure I need the rest of this function now?
+        $versions = [];
+        if (!empty($this->versions)) {
+            foreach ($this->versions as $version_array) {
+                $versions[] = sprintf('%s.0', $version_array[1]);
+            }
+        }
+        if (!empty($versions)) {
+            return $versions;
+        }
+        $links = $this->getVersionLinks();
+        foreach ($links as $link) {
+            $parts = explode('/', $link);
+            $version_tag_parts = explode('-', $parts[count($parts) - 1]);
+            if (count($version_tag_parts) > 1) {
+                $versions[] = sprintf('%s.0', $version_tag_parts[1]);
+            }
+        }
+        return $versions;
     }
 
     public function getTime()
@@ -72,18 +100,37 @@ class ContribSaParser
         throw new \Exception('No time found');
     }
 
-    public function getBranch()
+    /**
+     * @return string
+     * @throws \Exception
+     */
+    public function getBranches()
     {
-        $link = $this->getVersionLink();
-        return $this->getBranchFromLink($link);
+        $links = $this->getVersionLinks();
+        return $this->getBranchesFromLinks($links);
     }
 
-    protected function getVersionLink()
+    protected function getLinkHrefs(Crawler $nodes)
     {
-        $solution_link = $this->crawler->filter('.field-name-field-sa-solution a');
-        if ($solution_link->count() === 1) {
-            $href = $solution_link->getNode(0)->getAttribute('href');
-            return $href;
+        return $nodes->each(function (Crawler $node) {
+            return $node->attr('href');
+        });
+    }
+
+    protected function getVersionLinks()
+    {
+        $solution_links = $this->crawler->filter('.field-name-field-sa-solution a');
+        if ($solution_links->count() > 0) {
+            return $this->getLinkHrefs($solution_links);
+        }
+        // If the version is unsupported, then that is just a fact of life.
+        $unsupported_variations = [
+            'Module Unsupported',
+            'Unsupported Module',
+            'Unsupported',
+        ];
+        if (in_array($this->crawler->filter('.field-name-field-sa-type .field-item.even')->text(), $unsupported_variations)) {
+            return false;
         }
         $links_on_page = $this->getLinksOnPage();
         $indexed_links = [];
@@ -102,30 +149,49 @@ class ContribSaParser
             return true;
         });
         if ($potential_project_links->count() > 1) {
-            $potential_project_links = $potential_project_links->reduce(function (Crawler $node) {
-                $href = $node->getNode(0)->getAttribute('href');
-                // Ignore Drupal 7 for now, id we have more than one link to work with.
-                if (strpos($href, '7.x') !== false) {
-                    return false;
-                }
-                return true;
-            });
-        }
-        if ($potential_project_links->count() === 1) {
-            $href = $potential_project_links->getNode(0)->getAttribute('href');
-            return $href;
+            return $this->getLinkHrefs($potential_project_links);
         }
         throw new \Exception('No applicable link found');
     }
 
-    protected function getBranchFromLink($link)
+    protected function getBranchesFromLinks($links)
     {
-        $link_parts = explode('/', $link);
-        $branch_tag = $link_parts[count($link_parts) - 1];
-        $branch_tag_parts = explode('-', $branch_tag);
-        if (empty($branch_tag_parts[1])) {
-            throw new \Exception('Not possible to get branch from link ' . $link);
+        $branches = [];
+        foreach ($links as $link) {
+            $link_parts = explode('/', $link);
+            $branch_tag = $link_parts[count($link_parts) - 1];
+            $branch_tag_parts = explode('-', $branch_tag);
+            if (empty($branch_tag_parts[1])) {
+                continue;
+            }
+            $this->versions[] = $branch_tag_parts;
+            $branches[] = $this->getBranchNameFromDrupalVersion($branch_tag_parts);
         }
+        if (count($branches) === 0) {
+            // How about trying to go to said link, and then just getting it from there?
+            foreach ($links as $link) {
+                $data = $this->httpClient->get($link);
+                $html = (string) $data->getBody();
+                $link_crawler = new Crawler($html);
+                $heading = $link_crawler->filter('h1')->text();
+                $heading_parts = explode(' ', $heading);
+                $version = $heading_parts[count($heading_parts) - 1];
+                $branch_tag_parts = explode('-', $version);
+                if (empty($branch_tag_parts[1])) {
+                    continue;
+                }
+                $this->versions[] = $branch_tag_parts;
+                $branches[] = $this->getBranchNameFromDrupalVersion($branch_tag_parts);
+            }
+        }
+        if (count($branches) === 0) {
+            throw new \Exception('No branches could be extracted from SA');
+        }
+        return $branches;
+    }
+
+    protected function getBranchNameFromDrupalVersion($branch_tag_parts)
+    {
         $tag_parts = explode('.', $branch_tag_parts[1]);
         return sprintf('%s-%d.x', $branch_tag_parts[0], $tag_parts[0]);
     }

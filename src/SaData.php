@@ -4,54 +4,56 @@ namespace Violinist\DrupalContribSA;
 
 class SaData
 {
-    private $branch;
+    private $branches;
     private $name;
     private $time;
-    private $version;
-    private $lowestVulnerable;
+    private $versions;
+    private $lowestVulnerables;
 
     /**
      * @return mixed
      */
-    public function getVersion()
+    public function getVersions()
     {
-        return $this->version;
+        return $this->versions;
     }
 
     /**
      * @param mixed $version
      */
-    public function setVersion($version)
+    public function setVersions($versions)
     {
-        $this->version = $version;
-        // Now, this should be 3 parts. Major, minor, patch. So we set the version lowest vulnerable to the major.0.0
-        // (since Drupal contrib does not use semantic versioning).
-        $parts = explode('.', $version);
-        $this->lowestVulnerable = sprintf('%d.0.0', $parts[0]);
+        $this->versions = $versions;
+        foreach ($versions as $version) {
+            // Now, this should be 3 parts. Major, minor, patch. So we set the version lowest vulnerable to the major.0.0
+            // (since Drupal contrib does not use semantic versioning).
+            $parts = explode('.', $version);
+            $this->lowestVulnerables[] = sprintf('%d.0.0', $parts[0]);
+        }
     }
 
     /**
      * @return mixed
      */
-    public function getLowestVulnerable()
+    public function getLowestVulnerables()
     {
-        return $this->lowestVulnerable;
+        return $this->lowestVulnerables;
     }
 
     /**
      * @return mixed
      */
-    public function getBranch()
+    public function getBranches()
     {
-        return $this->branch;
+        return $this->branches;
     }
 
     /**
      * @param mixed $branch
      */
-    public function setBranch($branch)
+    public function setBranches($branch)
     {
-        $this->branch = $branch;
+        $this->branches = $branch;
     }
 
     /**

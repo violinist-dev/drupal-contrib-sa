@@ -26,8 +26,8 @@ class CompleterCommand extends Command
             try {
                 $filename = $this->completer->getFile();
                 $output->writeln('Completing file ' . $filename);
-                $data = $this->completer->completeFile($filename);
-                $this->completer->saveFile($filename, $data);
+                $data = $this->completer->completeFiles($filename);
+                $this->completer->saveFiles($filename, $data);
             } catch (\Exception $e) {
                 if ($filename) {
                     $output->writeln('Caught exception when processing file ' . $filename);

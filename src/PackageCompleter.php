@@ -39,13 +39,14 @@ class PackageCompleter
         return $file;
     }
 
-    public function completeFile($file)
+    public function completeFiles($file)
     {
         // Read the file, and find the link.
         $contents = @file_get_contents($file);
         if (empty($contents)) {
             throw new \Exception(sprintf('The file %s was empty', $file));
         }
+        $files = [];
         $data = Yaml::parse($contents);
         if (empty($data['link'])) {
             throw new \Exception(sprintf('The file %s had no link', $file));
@@ -53,42 +54,52 @@ class PackageCompleter
         $link = $data['link'];
         $details = $this->fetcher->fetchSa($link);
         $composer_name = sprintf('drupal/%s', $details->getName());
-        $version_parts = explode('.', $details->getVersion());
-        $composer_branch = sprintf('%s.%s.x', $version_parts[0], $version_parts[1]);
-        $data['branches'] = [
-            $composer_branch => [
-                'time' => date('Y-m-d H:i:s', $details->getTime()),
-                'versions' => [
-                    sprintf('>=%s', $details->getLowestVulnerable()),
-                    sprintf('<%s', $details->getVersion()),
-                ],
-            ]
-        ];
-        $repo = 'https://packages.drupal.org/8';
-        if (strpos($details->getBranch(), '8.x-') === false) {
-            $repo = 'https://packages.drupal.org/7';
+        $versions = explode('.', $details->getVersions());
+        $branches = $details->getBranches();
+        foreach ($versions as $delta => $version) {
+            $new_data = $data;
+            $version_parts = explode('.', $details->getVersion());
+            $composer_branch = sprintf('%s.%s.x', $version_parts[0], $version_parts[1]);
+            $new_data['branches'] = [
+                $composer_branch => [
+                    'time' => date('Y-m-d H:i:s', $details->getTime()),
+                    'versions' => [
+                        sprintf('>=%s', $details->getLowestVulnerables()),
+                        sprintf('<%s', $details->getBranches()),
+                    ],
+                ]
+            ];
+            $repo = 'https://packages.drupal.org/8';
+            $key = 8;
+            if (strpos($details->getBranches(), '8.x-') === false) {
+                $repo = 'https://packages.drupal.org/7';
+                $key = 7;
+            }
+            $new_data['composer-repository'] = $repo;
+            $new_data['reference'] = sprintf('composer://%s', $composer_name);
+            $files[$key] = $new_data;
         }
-        $data['composer-repository'] = $repo;
-        $data['reference'] = sprintf('composer://%s', $composer_name);
         return $data;
     }
 
-    public function saveFile($file, $data, $remove_original = true)
+    public function saveFiles($file, $datas, $remove_original = true)
     {
-        if ($remove_original) {
-            unlink($file);
+        foreach ($datas as $data) {
+            if ($remove_original) {
+                unlink($file);
+            }
+            $composer_name = str_replace('composer://', '', $data['reference']);
+            $version = 7;
+            if ($data["composer-repository"] == 'https://packages.drupal.org/8') {
+                $version = 8;
+            }
+            $dir = sprintf('%s/../sa_yaml/%d/%s', __DIR__, $version, $composer_name);
+            if (!file_exists($dir)) {
+                mkdir($dir, 0700, true);
+            }
+            $filename = $dir . '/' . $data['filename'];
+            unset($data['filename']);
+            file_put_contents($filename, Yaml::dump($data));
         }
-        $composer_name = str_replace('composer://', '', $data['reference']);
-        $version = 7;
-        if ($data["composer-repository"] == 'https://packages.drupal.org/8') {
-            $version = 8;
-        }
-        $dir = sprintf('%s/../sa_yaml/%d/%s', __DIR__, $version, $composer_name);
-        if (!file_exists($dir)) {
-            mkdir($dir, 0700, true);
-        }
-        $filename = $dir . '/' . $data['filename'];
-        unset($data['filename']);
-        file_put_contents($filename, Yaml::dump($data));
     }
 }
