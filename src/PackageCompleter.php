@@ -54,24 +54,31 @@ class PackageCompleter
         $link = $data['link'];
         $details = $this->fetcher->fetchSa($link);
         $composer_name = sprintf('drupal/%s', $details->getName());
-        $versions = explode('.', $details->getVersions());
         $branches = $details->getBranches();
-        foreach ($versions as $delta => $version) {
+        $lowests = $details->getLowestVulnerables();
+        foreach ($details->getVersions() as $delta => $version) {
+            if (empty($branches[$delta])) {
+                continue;
+            }
+            if (empty($lowests[$delta])) {
+                continue;
+            }
             $new_data = $data;
-            $version_parts = explode('.', $details->getVersion());
+            $version_parts = explode('.', $version);
             $composer_branch = sprintf('%s.%s.x', $version_parts[0], $version_parts[1]);
+            $branch = $branches[$delta];
             $new_data['branches'] = [
                 $composer_branch => [
                     'time' => date('Y-m-d H:i:s', $details->getTime()),
                     'versions' => [
-                        sprintf('>=%s', $details->getLowestVulnerables()),
-                        sprintf('<%s', $details->getBranches()),
+                        sprintf('>=%s', $lowests[$delta]),
+                        sprintf('<%s', $version),
                     ],
                 ]
             ];
             $repo = 'https://packages.drupal.org/8';
             $key = 8;
-            if (strpos($details->getBranches(), '8.x-') === false) {
+            if (strpos($branch, '8.x-') === false) {
                 $repo = 'https://packages.drupal.org/7';
                 $key = 7;
             }
@@ -79,15 +86,12 @@ class PackageCompleter
             $new_data['reference'] = sprintf('composer://%s', $composer_name);
             $files[$key] = $new_data;
         }
-        return $data;
+        return $files;
     }
 
     public function saveFiles($file, $datas, $remove_original = true)
     {
         foreach ($datas as $data) {
-            if ($remove_original) {
-                unlink($file);
-            }
             $composer_name = str_replace('composer://', '', $data['reference']);
             $version = 7;
             if ($data["composer-repository"] == 'https://packages.drupal.org/8') {
@@ -100,6 +104,9 @@ class PackageCompleter
             $filename = $dir . '/' . $data['filename'];
             unset($data['filename']);
             file_put_contents($filename, Yaml::dump($data));
+        }
+        if ($remove_original) {
+            unlink($file);
         }
     }
 }

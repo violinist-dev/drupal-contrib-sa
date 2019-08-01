@@ -4,6 +4,7 @@ namespace Violinist\DrupalContribSA;
 
 use GuzzleHttp\Client;
 use Symfony\Component\DomCrawler\Crawler;
+use Violinist\DrupalContribSA\Exception\UnsupportedVersionException;
 
 class ContribSaParser
 {
@@ -107,6 +108,9 @@ class ContribSaParser
     public function getBranches()
     {
         $links = $this->getVersionLinks();
+        if (empty($links)) {
+            throw new \Exception('No version links found in page');
+        }
         return $this->getBranchesFromLinks($links);
     }
 
@@ -130,7 +134,7 @@ class ContribSaParser
             'Unsupported',
         ];
         if (in_array($this->crawler->filter('.field-name-field-sa-type .field-item.even')->text(), $unsupported_variations)) {
-            return false;
+            throw new UnsupportedVersionException('Unsupported version');
         }
         $links_on_page = $this->getLinksOnPage();
         $indexed_links = [];
@@ -170,6 +174,13 @@ class ContribSaParser
         if (count($branches) === 0) {
             // How about trying to go to said link, and then just getting it from there?
             foreach ($links as $link) {
+                // Some times the link is relative, in different forms.
+                if (strpos($link, '/node') === 0) {
+                    $link = "https://drupal.org$link";
+                }
+                if (strpos($link, 'node') === 0) {
+                    $link = "https://drupal.org/$link";
+                }
                 $data = $this->httpClient->get($link);
                 $html = (string) $data->getBody();
                 $link_crawler = new Crawler($html);
