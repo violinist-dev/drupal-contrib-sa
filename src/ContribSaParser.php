@@ -164,8 +164,14 @@ class ContribSaParser
         foreach ($links as $link) {
             $link_parts = explode('/', $link);
             $branch_tag = $link_parts[count($link_parts) - 1];
+            if (strpos($branch_tag, '6.x') === 0) {
+                continue;
+            }
             $branch_tag_parts = explode('-', $branch_tag);
             if (empty($branch_tag_parts[1])) {
+                continue;
+            }
+            if (!empty($branch_tag_parts[2])) {
                 continue;
             }
             $this->versions[] = $branch_tag_parts;
@@ -188,6 +194,9 @@ class ContribSaParser
                 $heading_parts = explode(' ', $heading);
                 $version = $heading_parts[count($heading_parts) - 1];
                 $branch_tag_parts = explode('-', $version);
+                if (strpos($version, '6.x') === 0) {
+                    continue;
+                }
                 if (empty($branch_tag_parts[1])) {
                     continue;
                 }

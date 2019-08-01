@@ -84,7 +84,12 @@ class PackageCompleter
             }
             $new_data['composer-repository'] = $repo;
             $new_data['reference'] = sprintf('composer://%s', $composer_name);
-            $files[$key] = $new_data;
+            if (empty($files[$key])) {
+                $files[$key] = $new_data;
+            }
+            else {
+                $files[$key]['branches'] = array_merge($files[$key]['branches'], $new_data['branches']);
+            }
         }
         return $files;
     }
