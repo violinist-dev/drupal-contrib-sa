@@ -1,6 +1,7 @@
 link: 'https://www.drupal.org/sa-contrib-2018-019'
 title: 'Display Suite - Critical - Cross site scripting (XSS) - SA-CONTRIB-2018-019'
 branches:
+    1.10.x: { time: '2018-04-18 12:00:00', versions: ['>=1.0.0', '<1.10.0'] }
     2.15.x: { time: '2018-04-18 12:00:00', versions: ['>=2.0.0', '<2.15.0'] }
 composer-repository: 'https://packages.drupal.org/7'
 reference: 'composer://drupal/ds'

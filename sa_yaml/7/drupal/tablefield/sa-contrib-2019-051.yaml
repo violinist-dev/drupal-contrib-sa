@@ -1,6 +1,7 @@
 link: 'https://www.drupal.org/sa-contrib-2019-051'
 title: 'TableField - Moderately critical - Access bypass and Cross Site Scripting - SA-CONTRIB-2019-051'
 branches:
+    2.8.x: { time: '2019-05-29 12:00:00', versions: ['>=2.0.0', '<2.8.0'] }
     3.5.x: { time: '2019-05-29 12:00:00', versions: ['>=3.0.0', '<3.5.0'] }
 composer-repository: 'https://packages.drupal.org/7'
 reference: 'composer://drupal/tablefield'
