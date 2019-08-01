@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2018-054'
+title: 'Select (or other) - Moderately critical - Cross Site Scripting - SA-CONTRIB-2018-054'
+branches:
+    3.0.x: { time: '2018-07-25 12:00:00', versions: ['>=3.0.0', '<3.0.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/select_or_other'

@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2019-038'
+title: 'Simple hierarchical select - Moderately critical - Cross site request forgery - SA-CONTRIB-2019-038'
+branches:
+    1.8.x: { time: '2019-03-13 12:00:00', versions: ['>=1.0.0', '<1.8.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/shs'

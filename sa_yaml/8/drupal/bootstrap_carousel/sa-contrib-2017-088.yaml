@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2017-088'
+title: 'bootstrap_carousel - Moderately critical - Cross Site Scripting - SA-CONTRIB-2017-088'
+branches:
+    ..x: { time: '2017-11-29 12:00:00', versions: ['>=', '<Array'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/bootstrap_carousel'
