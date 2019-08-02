@@ -13,6 +13,7 @@ class SaFetcher extends HtmlDownloaderBase
         $crawler = $this->getCrawlerFromResponse($res);
         $parser = new ContribSaParser($crawler);
         $parser->setHttpClient($this->client);
+        $parser->setCache($this->cache);
         $name = $parser->getProjectName();
         $branches = $parser->getBranches();
         $time = $parser->getTime();

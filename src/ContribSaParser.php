@@ -3,6 +3,7 @@
 namespace Violinist\DrupalContribSA;
 
 use GuzzleHttp\Client;
+use Symfony\Component\Cache\Simple\FilesystemCache;
 use Symfony\Component\DomCrawler\Crawler;
 use Violinist\DrupalContribSA\Exception\UnsupportedVersionException;
 
@@ -15,11 +16,21 @@ class ContribSaParser
      */
     private $httpClient;
 
+    /**
+     * @var FilesystemCache
+     */
+    private $cache;
+
     private $versions = [];
 
     public function __construct(Crawler $crawler)
     {
         $this->crawler = $crawler;
+    }
+
+    public function setCache(FilesystemCache $cache)
+    {
+        $this->cache = $cache;
     }
 
     public function setHttpClient(Client $client)
@@ -192,8 +203,7 @@ class ContribSaParser
                 if (strpos($link, 'node') === 0) {
                     $link = "https://drupal.org/$link";
                 }
-                $data = $this->httpClient->get($link);
-                $html = (string) $data->getBody();
+                $html = $this->getData($link);
                 $link_crawler = new Crawler($html);
                 $heading = $link_crawler->filter('h1')->text();
                 $heading_parts = explode(' ', $heading);
@@ -213,6 +223,18 @@ class ContribSaParser
             throw new \Exception('No branches could be extracted from SA');
         }
         return $branches;
+    }
+
+    protected function getData($url)
+    {
+        $cid = md5(json_encode([$url]));
+        if ($data = $this->cache->get($cid)) {
+            return $data;
+        }
+        $response = $this->httpClient->get($url);
+        $response_body = (string) $response->getBody();
+        $this->cache->set($cid, $response_body);
+        return $response_body;
     }
 
     protected function getBranchNameFromDrupalVersion($branch_tag_parts)
