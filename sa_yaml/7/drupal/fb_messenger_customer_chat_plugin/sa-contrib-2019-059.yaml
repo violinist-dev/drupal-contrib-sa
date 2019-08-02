@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2019-059'
+title: 'Facebook Messenger Customer Chat Plugin - Critical - Access bypass - SA-CONTRIB-2019-059'
+branches:
+    1.1.x: { time: '2019-07-24 12:00:00', versions: ['>=1.0.0', '<1.1.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/fb_messenger_customer_chat_plugin'

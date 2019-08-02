@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2019-057'
+title: 'Meta tags quick - Moderately critical - Cross Site Scripting - SA-CONTRIB-2019-057'
+branches:
+    2.10.x: { time: '2019-07-17 12:00:00', versions: ['>=2.0.0', '<2.10.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/metatags_quick'

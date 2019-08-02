@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2018-081'
+title: 'JSON:API - Moderately critical - Access bypass - SA-CONTRIB-2018-081'
+branches:
+    1.24.x: { time: '2018-12-19 12:00:00', versions: ['>=1.0.0', '<1.24.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/jsonapi'

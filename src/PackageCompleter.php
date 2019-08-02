@@ -39,13 +39,14 @@ class PackageCompleter
         return $file;
     }
 
-    public function completeFile($file)
+    public function completeFiles($file)
     {
         // Read the file, and find the link.
         $contents = @file_get_contents($file);
         if (empty($contents)) {
             throw new \Exception(sprintf('The file %s was empty', $file));
         }
+        $files = [];
         $data = Yaml::parse($contents);
         if (empty($data['link'])) {
             throw new \Exception(sprintf('The file %s had no link', $file));
@@ -53,42 +54,64 @@ class PackageCompleter
         $link = $data['link'];
         $details = $this->fetcher->fetchSa($link);
         $composer_name = sprintf('drupal/%s', $details->getName());
-        $version_parts = explode('.', $details->getVersion());
-        $composer_branch = sprintf('%s.%s.x', $version_parts[0], $version_parts[1]);
-        $data['branches'] = [
-            $composer_branch => [
-                'time' => date('Y-m-d H:i:s', $details->getTime()),
-                'versions' => [
-                    sprintf('>=%s', $details->getLowestVulnerable()),
-                    sprintf('<%s', $details->getVersion()),
-                ],
-            ]
-        ];
-        $repo = 'https://packages.drupal.org/8';
-        if (strpos($details->getBranch(), '8.x-') === false) {
-            $repo = 'https://packages.drupal.org/7';
+        $branches = $details->getBranches();
+        $lowests = $details->getLowestVulnerables();
+        foreach ($details->getVersions() as $delta => $version) {
+            if (empty($branches[$delta])) {
+                continue;
+            }
+            if (empty($lowests[$delta])) {
+                continue;
+            }
+            $new_data = $data;
+            $version_parts = explode('.', $version);
+            $composer_branch = sprintf('%s.%s.x', $version_parts[0], $version_parts[1]);
+            $branch = $branches[$delta];
+            $new_data['branches'] = [
+                $composer_branch => [
+                    'time' => date('Y-m-d H:i:s', $details->getTime()),
+                    'versions' => [
+                        sprintf('>=%s', $lowests[$delta]),
+                        sprintf('<%s', $version),
+                    ],
+                ]
+            ];
+            $repo = 'https://packages.drupal.org/8';
+            $key = 8;
+            if (strpos($branch, '8.x-') === false) {
+                $repo = 'https://packages.drupal.org/7';
+                $key = 7;
+            }
+            $new_data['composer-repository'] = $repo;
+            $new_data['reference'] = sprintf('composer://%s', $composer_name);
+            if (empty($files[$key])) {
+                $files[$key] = $new_data;
+            }
+            else {
+                $files[$key]['branches'] = array_merge($files[$key]['branches'], $new_data['branches']);
+            }
         }
-        $data['composer-repository'] = $repo;
-        $data['reference'] = sprintf('composer://%s', $composer_name);
-        return $data;
+        return $files;
     }
 
-    public function saveFile($file, $data, $remove_original = true)
+    public function saveFiles($file, $datas, $remove_original = true)
     {
+        foreach ($datas as $data) {
+            $composer_name = str_replace('composer://', '', $data['reference']);
+            $version = 7;
+            if ($data["composer-repository"] == 'https://packages.drupal.org/8') {
+                $version = 8;
+            }
+            $dir = sprintf('%s/../sa_yaml/%d/%s', __DIR__, $version, $composer_name);
+            if (!file_exists($dir)) {
+                mkdir($dir, 0700, true);
+            }
+            $filename = $dir . '/' . $data['filename'];
+            unset($data['filename']);
+            file_put_contents($filename, Yaml::dump($data));
+        }
         if ($remove_original) {
             unlink($file);
         }
-        $composer_name = str_replace('composer://', '', $data['reference']);
-        $version = 7;
-        if ($data["composer-repository"] == 'https://packages.drupal.org/8') {
-            $version = 8;
-        }
-        $dir = sprintf('%s/../sa_yaml/%d/%s', __DIR__, $version, $composer_name);
-        if (!file_exists($dir)) {
-            mkdir($dir, 0700, true);
-        }
-        $filename = $dir . '/' . $data['filename'];
-        unset($data['filename']);
-        file_put_contents($filename, Yaml::dump($data));
     }
 }

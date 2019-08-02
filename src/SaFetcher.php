@@ -12,15 +12,17 @@ class SaFetcher extends HtmlDownloaderBase
         $res = $this->download($url);
         $crawler = $this->getCrawlerFromResponse($res);
         $parser = new ContribSaParser($crawler);
+        $parser->setHttpClient($this->client);
+        $parser->setCache($this->cache);
         $name = $parser->getProjectName();
-        $branch = $parser->getBranch();
+        $branches = $parser->getBranches();
         $time = $parser->getTime();
-        $version = $parser->getVersion();
+        $versions = $parser->getVersions();
         $data = new SaData();
         $data->setTime($time);
         $data->setName($name);
-        $data->setBranch($branch);
-        $data->setVersion($version);
+        $data->setBranches($branches);
+        $data->setVersions($versions);
         return $data;
     }
 }

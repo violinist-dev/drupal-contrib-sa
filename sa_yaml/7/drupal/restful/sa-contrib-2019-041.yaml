@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2019-041'
+title: 'RESTful - Critical - Remote code execution - SA-CONTRIB-2019-041'
+branches:
+    1.10.x: { time: '2019-03-20 12:00:00', versions: ['>=1.0.0', '<1.10.0'] }
+    2.17.x: { time: '2019-03-20 12:00:00', versions: ['>=2.0.0', '<2.17.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/restful'
