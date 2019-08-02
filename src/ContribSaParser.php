@@ -167,6 +167,11 @@ class ContribSaParser
             if (strpos($branch_tag, '6.x') === 0) {
                 continue;
             }
+            if (strpos($link, '/project/')) {
+                if (!strpos($link, $this->getProjectName())) {
+                    continue;
+                }
+            }
             $branch_tag_parts = explode('-', $branch_tag);
             if (empty($branch_tag_parts[1])) {
                 continue;
