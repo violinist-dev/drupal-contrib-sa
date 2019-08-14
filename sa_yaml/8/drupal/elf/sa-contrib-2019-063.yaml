@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2019-063'
+title: 'External Links Filter - Moderately critical - Open Redirect Vulnerability - SA-CONTRIB-2019-063'
+branches:
+    1.2.x: { time: '2019-08-14 12:00:00', versions: ['>=1.0.0', '<1.2.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/elf'

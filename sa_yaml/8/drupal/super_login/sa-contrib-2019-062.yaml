@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2019-062'
+title: 'Super Login - Moderately critical - Cross site scripting - SA-CONTRIB-2019-062'
+branches:
+    1.3.x: { time: '2019-08-14 12:00:00', versions: ['>=1.0.0', '<1.3.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/super_login'
