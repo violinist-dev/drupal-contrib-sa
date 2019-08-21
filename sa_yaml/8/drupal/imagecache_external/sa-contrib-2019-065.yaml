@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2019-065'
+title: 'Imagecache External - Critical - Insecure session token management - SA-CONTRIB-2019-065'
+branches:
+    1.1.x: { time: '2019-08-21 12:00:00', versions: ['>=1.0.0', '<1.1.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/imagecache_external'
