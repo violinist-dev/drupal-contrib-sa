@@ -1,7 +1,8 @@
 #!/bin/sh -xe
 
 DATE=`date +%m-%d-%Y`
-
+cd "${0%/*}/.."
+git checkout master
 composer install --no-interaction --no-progress
 rm -rf sa_yaml/7/drupal sa_yaml/8/drupal
 
