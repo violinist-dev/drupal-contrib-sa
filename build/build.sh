@@ -1,5 +1,7 @@
 #!/bin/sh -xe
 
+DATE=`date +%m-%d-%Y`
+
 composer install --no-interaction --no-progress
 rm -rf sa_yaml/7/drupal sa_yaml/8/drupal
 
@@ -11,5 +13,8 @@ git checkout sa_yaml/8/drupal/svg_formatter/sa-contrib-2018-027.yaml
 
 if [ ! -z "$(git status --porcelain)" ]
 then
-  echo "things"
+  git add sa_yaml
+  git checkout -b autoupdate/$DATE
+  git commit -m "Drupal Contrib SA $DATE"
+  git push origin autoupdate/$DATE
 fi
