@@ -1,6 +1,0 @@
-link: 'https://www.drupal.org/sa-contrib-2018-053'
-title: 'XML sitemap - Moderately critical - Information Disclosure - SA-CONTRIB-2018-053'
-branches:
-    2.4.x: { time: '2018-07-18 12:00:00', versions: ['>=2.0.0', '<2.4.0'] }
-composer-repository: 'https://packages.drupal.org/7'
-reference: 'composer://drupal/xmlsitemap'
