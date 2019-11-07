@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2018-069'
+title: 'HTML Mail - Critical - Remote Code Execution - SA-CONTRIB-2018-069'
+branches:
+    2.71.x: { time: '2018-10-17 12:00:00', versions: ['>=2.0.0', '<2.71.0'] }
+    2.66.x: { time: '2018-10-17 12:00:00', versions: ['>=2.0.0', '<2.66.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/htmlmail'
