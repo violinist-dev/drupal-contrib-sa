@@ -172,6 +172,10 @@ class ContribSaParser
     protected function getBranchesFromLinks($links)
     {
         $branches = [];
+        if (count($links) === 1 && strpos($links[0], 'node/251466')) {
+            // That means the project is unsupported.
+            return $branches;
+        }
         foreach ($links as $link) {
             $link_parts = explode('/', $link);
             $branch_tag = $link_parts[count($link_parts) - 1];
