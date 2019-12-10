@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2019-082'
+title: 'Field Slideshow - Less critical - Cross site scripting - SA-CONTRIB-2019-082'
+branches:
+    1.83.x: { time: '2019-11-13 12:00:00', versions: ['>=1.0.0', '<1.83.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/field_slideshow'
