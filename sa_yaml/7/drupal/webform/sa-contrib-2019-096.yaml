@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2019-096'
+title: 'Webform - Critical - Multiple vulnerabilities - SA-CONTRIB-2019-096'
+branches:
+    3.29.x: { time: '2019-12-11 12:00:00', versions: ['>=3.0.0', '<3.29.0'] }
+    4.21.x: { time: '2019-12-11 12:00:00', versions: ['>=4.0.0', '<4.21.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/webform'
