@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2019-093'
+title: 'Taxonomy access fix - Moderately critical - Access bypass - SA-CONTRIB-2019-093'
+branches:
+    2.7.x: { time: '2019-12-11 12:00:00', versions: ['>=2.0.0', '<2.7.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/taxonomy_access_fix'
