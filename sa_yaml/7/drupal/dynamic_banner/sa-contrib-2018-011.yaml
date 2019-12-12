@@ -1,5 +1,5 @@
 link: 'https://www.drupal.org/sa-contrib-2018-011'
-title: 'Dynamic Banner - Critical - Module Unsupported - SA-CONTRIB-2018-011'
+title: 'Dynamic Banner - Less critical - Cross site scripting - SA-CONTRIB-2018-011'
 branches:
     1.1.x: { time: '2018-02-14 12:00:00', versions: ['>=1.0.0', '<1.1.0'] }
 composer-repository: 'https://packages.drupal.org/7'
