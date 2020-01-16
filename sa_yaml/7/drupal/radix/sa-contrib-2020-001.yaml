@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2020-001'
+title: 'Radix - Moderately critical - Cross site scripting - SA-CONTRIB-2020-001'
+branches:
+    3.8.x: { time: '2020-01-15 12:00:00', versions: ['>=3.0.0', '<3.8.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/radix'

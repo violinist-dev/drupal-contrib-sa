@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2019-084'
+title: 'Taxonomy CSV import/export - Moderately critical - Information disclosure - SA-CONTRIB-2019-084'
+branches:
+    5.11.x: { time: '2019-11-13 12:00:00', versions: ['>=5.0.0', '<5.11.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/taxonomy_csv'
