@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2020-003'
+title: 'Views Bulk Operations (VBO) - Moderately critical - Access bypass - SA-CONTRIB-2020-003'
+branches:
+    3.4.x: { time: '2020-02-05 12:00:00', versions: ['>=3.0.0', '<3.4.0'] }
+    2.6.x: { time: '2020-02-05 12:00:00', versions: ['>=2.0.0', '<2.6.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/views_bulk_operations'
