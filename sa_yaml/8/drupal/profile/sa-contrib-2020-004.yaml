@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2020-004'
+title: 'Profile - Moderately critical - Access Bypass - SA-CONTRIB-2020-004'
+branches:
+    1.1.x: { time: '2020-02-19 12:00:00', versions: ['>=1.0.0', '<1.1.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/profile'
