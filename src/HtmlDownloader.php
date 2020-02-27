@@ -2,7 +2,6 @@
 
 namespace Violinist\DrupalContribSA;
 
-use GuzzleHttp\Client;
 use Symfony\Component\DomCrawler\Crawler;
 
 class HtmlDownloader extends HtmlDownloaderBase
@@ -59,4 +58,5 @@ class HtmlDownloader extends HtmlDownloaderBase
         return !$this->lastPage;
 
     }
+
 }
