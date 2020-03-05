@@ -1,5 +1,7 @@
 #!/bin/sh -xe
 
+set -eu
+
 DATE=`date +%m-%d-%Y-%H-%M`
 cd "${0%/*}/.."
 composer install --no-interaction --no-progress --quiet
@@ -15,9 +17,9 @@ if [ ! -z "$(git status --porcelain)" ]
 then
   git add sa_yaml
   git checkout -b autoupdate/$DATE
-  git commit -m "Drupal Contrib SA $DATE"
   git config --global user.email "committer@example.com"
   git config --global user.name "Auto Commit"
+  git commit -m "Drupal Contrib SA $DATE"
   git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
   git push github autoupdate/$DATE
 fi
