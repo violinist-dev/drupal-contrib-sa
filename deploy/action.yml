@@ -1,0 +1,5 @@
+name: 'Build deployment'
+description: 'Deploy with some simple parameters'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

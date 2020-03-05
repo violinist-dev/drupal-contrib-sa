@@ -1,0 +1,17 @@
+name: Build SAs
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '30 21 * * *'
+
+jobs:
+  build:
+    name: Build SAs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./deploy/
+        env:
+          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
