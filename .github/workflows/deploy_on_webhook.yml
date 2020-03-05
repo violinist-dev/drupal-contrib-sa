@@ -1,0 +1,10 @@
+name: Build on webhook
+on: repository_dispatch
+
+jobs:
+  build:
+    name: Build on webhook
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./deploy/

@@ -2,8 +2,6 @@
 
 DATE=`date +%m-%d-%Y-%T`
 cd "${0%/*}/.."
-git checkout master --quiet
-git pull origin master --quiet
 composer install --no-interaction --no-progress --quiet
 rm -rf sa_yaml/7/drupal sa_yaml/8/drupal
 
@@ -18,5 +16,6 @@ then
   git add sa_yaml
   git checkout -b autoupdate/$DATE
   git commit -m "Drupal Contrib SA $DATE"
-  git push origin autoupdate/$DATE
+  git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+  git push github autoupdate/$DATE
 fi
