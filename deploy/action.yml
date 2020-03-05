@@ -3,7 +3,3 @@ description: 'Deploy with some simple parameters'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  env:
-    GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
