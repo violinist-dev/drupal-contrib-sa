@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2020-005'
+title: 'SVG Formatter - Critical - Cross site scripting - SA-CONTRIB-2020-005'
+branches:
+    1.12.x: { time: '2020-03-04 12:00:00', versions: ['>=1.0.0', '<1.12.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/svg_formatter'
