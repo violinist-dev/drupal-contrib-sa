@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2020-006'
+title: 'SAML Service Provider - Critical - Access bypass - SA-CONTRIB-2020-006'
+branches:
+    3.7.x: { time: '2020-03-11 12:00:00', versions: ['>=3.0.0', '<3.7.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/saml_sp'
