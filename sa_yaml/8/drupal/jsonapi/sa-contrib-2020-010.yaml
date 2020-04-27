@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2020-010'
+title: 'JSON:API - Critical - Unsupported - SA-CONTRIB-2020-010'
+branches:
+    2.x.x: { time: '2020-04-15 12:00:00', versions: ['>=2.0.0', '<2.x.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/jsonapi'
