@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2020-018'
+title: 'Webform - Critical - Access bypass - SA-CONTRIB-2020-018'
+branches:
+    5.12.x: { time: '2020-05-13 12:00:00', versions: ['>=5.0.0', '<5.12.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/webform'

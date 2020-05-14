@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2020-019'
+title: 'reCAPTCHA v3 - Critical - Access bypass - SA-CONTRIB-2020-019'
+branches:
+    1.2.x: { time: '2020-05-13 12:00:00', versions: ['>=1.0.0', '<1.2.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/recaptcha_v3'
