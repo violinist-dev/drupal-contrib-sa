@@ -477,16 +477,16 @@
         },
         {
             "name": "symfony/cache",
-            "version": "v3.4.40",
+            "version": "v3.4.41",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache.git",
-                "reference": "c9f37a7efd9cb1ab66e42152f43dc50c33ca753c"
+                "reference": "1c139918b4e93aac8a1afc7785e106c2456c57cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache/zipball/c9f37a7efd9cb1ab66e42152f43dc50c33ca753c",
-                "reference": "c9f37a7efd9cb1ab66e42152f43dc50c33ca753c",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/1c139918b4e93aac8a1afc7785e106c2456c57cc",
+                "reference": "1c139918b4e93aac8a1afc7785e106c2456c57cc",
                 "shasum": ""
             },
             "require": {
@@ -505,9 +505,9 @@
             },
             "require-dev": {
                 "cache/integration-tests": "dev-master",
-                "doctrine/cache": "~1.6",
-                "doctrine/dbal": "~2.4",
-                "predis/predis": "~1.0"
+                "doctrine/cache": "^1.6",
+                "doctrine/dbal": "^2.4|^3.0",
+                "predis/predis": "^1.0"
             },
             "type": "library",
             "extra": {
@@ -557,7 +557,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-04-23T21:50:38+00:00"
+            "time": "2020-05-28T07:55:04+00:00"
         },
         {
             "name": "symfony/console",
@@ -954,16 +954,16 @@
         },
         {
             "name": "symfony/polyfill-apcu",
-            "version": "v1.15.0",
+            "version": "v1.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-apcu.git",
-                "reference": "d6b5c4ac62cd4ed622e583d027ae684de2d3c4bd"
+                "reference": "9ec426b564916afb9bfd15f78708ec322eeb8538"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-apcu/zipball/d6b5c4ac62cd4ed622e583d027ae684de2d3c4bd",
-                "reference": "d6b5c4ac62cd4ed622e583d027ae684de2d3c4bd",
+                "url": "https://api.github.com/repos/symfony/polyfill-apcu/zipball/9ec426b564916afb9bfd15f78708ec322eeb8538",
+                "reference": "9ec426b564916afb9bfd15f78708ec322eeb8538",
                 "shasum": ""
             },
             "require": {
@@ -972,7 +972,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.15-dev"
+                    "dev-master": "1.17-dev"
                 }
             },
             "autoload": {
@@ -1006,7 +1006,21 @@
                 "portable",
                 "shim"
             ],
-            "time": "2020-02-27T09:26:54+00:00"
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-05-12T16:14:59+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
