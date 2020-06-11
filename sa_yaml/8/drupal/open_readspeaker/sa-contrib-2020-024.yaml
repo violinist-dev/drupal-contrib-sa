@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2020-024'
+title: 'Open ReadSpeaker - Moderately critical - Cross site scripting - SA-CONTRIB-2020-024'
+branches:
+    1.5.x: { time: '2020-06-10 12:00:00', versions: ['>=1.0.0', '<1.5.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/open_readspeaker'
