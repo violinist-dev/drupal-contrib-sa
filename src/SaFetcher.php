@@ -3,6 +3,7 @@
 namespace Violinist\DrupalContribSA;
 
 use Symfony\Component\DomCrawler\Crawler;
+use Violinist\DrupalContribSA\Exception\NoLinksException;
 
 class SaFetcher extends HtmlDownloaderBase
 {
@@ -24,7 +25,9 @@ class SaFetcher extends HtmlDownloaderBase
         } else {
             $json = json_decode($data['data']);
             if (empty($json->field_sa_solution->value)) {
-                throw new \Exception('Not possible to find project name');
+                $json->field_sa_solution = (object) [
+                    'value' => '',
+                ];
             }
             $crawler = new Crawler('<div class="field-name-field-sa-solution">' . $json->field_sa_solution->value . '</div>');
             $parser = new ContribSaParser($crawler);
@@ -46,7 +49,15 @@ class SaFetcher extends HtmlDownloaderBase
                 if ($url === 'https://www.drupal.org/sa-contrib-2019-024') {
                     $name = 'tmgmt';
                 }
-            } catch (\Throwable $e) {
+            }
+            catch (NoLinksException $e) {
+                throw $e;
+            }
+            catch (\Throwable $e) {
+                if (!empty($json->field_project->uri) && $json->field_project->uri === 'https://www.drupal.org/api-d7/node/807766') {
+                    // That is not a specific project.
+                    throw new NoLinksException();
+                }
                 $res = $this->download($json->field_project->uri . '.json');
                 $project_json = json_decode($res);
                 if (!empty($project_json->field_project_machine_name)) {

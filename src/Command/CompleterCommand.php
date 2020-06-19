@@ -5,6 +5,7 @@ namespace Violinist\DrupalContribSA\Command;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Violinist\DrupalContribSA\Exception\NoLinksException;
 use Violinist\DrupalContribSA\Exception\UnsupportedVersionException;
 use Violinist\DrupalContribSA\PackageCompleter;
 
@@ -33,8 +34,9 @@ class CompleterCommand extends Command
                 // No worries.
                 unlink($filename);
                 continue;
-            }
-            catch (\Exception $e) {
+            } catch (NoLinksException $e) {
+                // That happens.
+            } catch (\Exception $e) {
                 if ($filename) {
                     $output->writeln("Caught exception when processing file $filename: {$e->getMessage()}");
                     $output->writeln([

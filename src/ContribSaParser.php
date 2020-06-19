@@ -5,6 +5,7 @@ namespace Violinist\DrupalContribSA;
 use GuzzleHttp\Client;
 use Symfony\Component\Cache\Simple\FilesystemCache;
 use Symfony\Component\DomCrawler\Crawler;
+use Violinist\DrupalContribSA\Exception\NoLinksException;
 use Violinist\DrupalContribSA\Exception\UnsupportedVersionException;
 
 class ContribSaParser
@@ -50,6 +51,9 @@ class ContribSaParser
         }
         $links_on_page = $this->getLinksOnPage();
         $indexed_links = [];
+        if (!$links_on_page->count()) {
+            throw new NoLinksException();
+        }
         $potential_project_links = $links_on_page->reduce(function (Crawler $node) use (&$indexed_links) {
             if (!$node->count()) {
                 return false;
@@ -208,6 +212,9 @@ class ContribSaParser
                 }
                 if (strpos($link, 'node') === 0) {
                     $link = "https://drupal.org/$link";
+                }
+                if (!$link) {
+                    continue;
                 }
                 $html = $this->getData($link);
                 $link_crawler = new Crawler($html);
