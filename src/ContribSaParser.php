@@ -5,10 +5,13 @@ namespace Violinist\DrupalContribSA;
 use GuzzleHttp\Client;
 use Symfony\Component\Cache\Simple\FilesystemCache;
 use Symfony\Component\DomCrawler\Crawler;
+use Violinist\DrupalContribSA\Exception\NoLinksException;
 use Violinist\DrupalContribSA\Exception\UnsupportedVersionException;
 
 class ContribSaParser
 {
+    protected $linksSelector = '.node a';
+
     private $crawler;
 
     /**
@@ -48,6 +51,9 @@ class ContribSaParser
         }
         $links_on_page = $this->getLinksOnPage();
         $indexed_links = [];
+        if (!$links_on_page->count()) {
+            throw new NoLinksException();
+        }
         $potential_project_links = $links_on_page->reduce(function (Crawler $node) use (&$indexed_links) {
             if (!$node->count()) {
                 return false;
@@ -116,13 +122,13 @@ class ContribSaParser
      * @return string
      * @throws \Exception
      */
-    public function getBranches()
+    public function getBranches($name = null)
     {
         $links = $this->getVersionLinks();
         if (empty($links)) {
             throw new \Exception('No version links found in page');
         }
-        return $this->getBranchesFromLinks($links);
+        return $this->getBranchesFromLinks($links, $name);
     }
 
     protected function getLinkHrefs(Crawler $nodes)
@@ -169,7 +175,7 @@ class ContribSaParser
         throw new \Exception('No applicable link found');
     }
 
-    protected function getBranchesFromLinks($links)
+    protected function getBranchesFromLinks($links, $name = null)
     {
         $branches = [];
         if (count($links) === 1 && strpos($links[0], 'node/251466')) {
@@ -183,7 +189,7 @@ class ContribSaParser
                 continue;
             }
             if (strpos($link, '/project/')) {
-                if (!strpos($link, $this->getProjectName())) {
+                if (!strpos($link, $name) && !strpos($link, $this->getProjectName())) {
                     continue;
                 }
             }
@@ -206,6 +212,9 @@ class ContribSaParser
                 }
                 if (strpos($link, 'node') === 0) {
                     $link = "https://drupal.org/$link";
+                }
+                if (!$link) {
+                    continue;
                 }
                 $html = $this->getData($link);
                 $link_crawler = new Crawler($html);
@@ -249,7 +258,17 @@ class ContribSaParser
 
     protected function getLinksOnPage()
     {
-        return $this->crawler->filter('.node a');
+        return $this->crawler->filter($this->getlinksSelector());
+    }
+
+    protected function getlinksSelector()
+    {
+        return $this->linksSelector;
+    }
+
+    public function setlinksSelector($selector)
+    {
+        $this->linksSelector = $selector;
     }
 
     protected function getProjectNameFromLink($link)

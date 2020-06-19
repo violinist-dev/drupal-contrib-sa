@@ -33,6 +33,11 @@ abstract class HtmlDownloaderBase
         if ($data = $this->cache->get($cid)) {
             return $data;
         }
+        $params['headers'] = [
+            'headers' => [
+                'User-Agent' => 'drupal-contrib-sa package (https://github.com/violinist-dev/drupal-contrib-sa)',
+            ],
+        ];
         $response = $this->client->get($url, $params);
         $response_body = (string) $response->getBody();
         $this->cache->set($cid, $response_body);
