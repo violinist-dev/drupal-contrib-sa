@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2020-025'
+title: 'Internationalization - Moderately critical - Cross site scripting - SA-CONTRIB-2020-025'
+branches:
+    1.27.x: { time: '2020-06-17 12:00:00', versions: ['>=1.0.0', '<1.27.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/i18n'

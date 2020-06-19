@@ -52,7 +52,7 @@ class PackageCompleter
             throw new \Exception(sprintf('The file %s had no link', $file));
         }
         $link = $data['link'];
-        $details = $this->fetcher->fetchSa($link);
+        $details = $this->fetcher->fetchSa($link, $data);
         $composer_name = sprintf('drupal/%s', $details->getName());
         $branches = $details->getBranches();
         $lowests = $details->getLowestVulnerables();
@@ -67,9 +67,11 @@ class PackageCompleter
             $version_parts = explode('.', $version);
             $composer_branch = sprintf('%s.%s.x', $version_parts[0], $version_parts[1]);
             $branch = $branches[$delta];
+            $date_obj = \DateTime::createFromFormat('U', $details->getTime());
+            $date_obj->setTimezone(new \DateTimeZone('+0000'));
             $new_data['branches'] = [
                 $composer_branch => [
-                    'time' => date('Y-m-d H:i:s', $details->getTime()),
+                    'time' => $date_obj->format('Y-m-d H:i:s'),
                     'versions' => [
                         sprintf('>=%s', $lowests[$delta]),
                         sprintf('<%s', $version),
@@ -86,8 +88,7 @@ class PackageCompleter
             $new_data['reference'] = sprintf('composer://%s', $composer_name);
             if (empty($files[$key])) {
                 $files[$key] = $new_data;
-            }
-            else {
+            } else {
                 $files[$key]['branches'] = array_merge($files[$key]['branches'], $new_data['branches']);
             }
         }
@@ -99,7 +100,7 @@ class PackageCompleter
         foreach ($datas as $data) {
             $composer_name = str_replace('composer://', '', $data['reference']);
             $version = 7;
-            if ($data["composer-repository"] == 'https://packages.drupal.org/8') {
+            if ($data["composer-repository"] === 'https://packages.drupal.org/8') {
                 $version = 8;
             }
             $dir = sprintf('%s/../sa_yaml/%d/%s', __DIR__, $version, $composer_name);
@@ -108,6 +109,8 @@ class PackageCompleter
             }
             $filename = $dir . '/' . $data['filename'];
             unset($data['filename']);
+            unset($data['filename_temp']);
+            unset($data['data']);
             file_put_contents($filename, Yaml::dump($data));
         }
         if ($remove_original) {

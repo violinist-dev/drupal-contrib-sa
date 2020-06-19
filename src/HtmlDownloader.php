@@ -8,7 +8,7 @@ class HtmlDownloader extends HtmlDownloaderBase
 {
     private $page = 0;
 
-    private $baseUrl = 'https://www.drupal.org/security/contrib';
+    private $baseUrl = 'https://www.drupal.org/api-d7/node.json';
 
     private $lastPage = false;
 
@@ -22,32 +22,31 @@ class HtmlDownloader extends HtmlDownloaderBase
         $res = $this->download($this->baseUrl, [
             'query' => [
                 'page' => $this->getPage(),
+                'type' => 'sa',
+                'status' => 1,
+                'sort' => 'nid',
+                'direction' => 'DESC',
             ],
         ]);
-        $crawler = $this->getCrawlerFromResponse($res);
-        $rows = $crawler->filter('.view-drupalorg-security-announcements-contrib .views-row');
-        $sa_links = $rows->each(function (Crawler $node) {
-            $link = $node->filter('h2 a');
-            if ($link->count() != 1) {
-                return;
-            }
-            $link_url = $link->extract(['href'])[0];
-            if (strpos($link_url, 'forum/newsletter') !== false) {
-                // @todo.
-                return;
-            }
+        $data = json_decode($res);
+        $data->list = array_filter($data->list, function ($item) {
+            return $item->field_project->id != 3060;
+        });
+        $sa_links = array_map(function ($item) {
+            $link = $item->url;
+            $link_url_array = parse_url($link);
+            $link_url = substr($link_url_array["path"], 1);
             return [
-                'link' => sprintf('https://www.drupal.org%s', $link_url),
-                'title' => $link->text(),
+                'link' => $link,
+                'title' => $item->title,
                 'filename' => $link_url,
+                'filename_temp' => md5($link),
+                'data' => json_encode($item),
             ];
-        });
-        $sa_links = array_filter($sa_links, function ($item) {
-            return !empty($item);
-        });
+        }, $data->list);
         $this->page++;
         // Now see if we are on the last page or not.
-        if (!$crawler->filter('.pager-next')->count()) {
+        if (empty($data->next)) {
             $this->lastPage = true;
         }
         return $sa_links;
