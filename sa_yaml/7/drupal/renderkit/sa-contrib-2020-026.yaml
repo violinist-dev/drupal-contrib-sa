@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2020-026'
+title: 'Renderkit - Less critical - Access bypass - SA-CONTRIB-2020-026'
+branches:
+    1.14.x: { time: '2020-07-01 12:00:00', versions: ['>=1.0.0', '<1.14.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/renderkit'
