@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2020-027'
+title: 'Easy Breadcrumb - Moderately critical - Cross site scripting - SA-CONTRIB-2020-027'
+branches:
+    1.13.x: { time: '2020-07-22 12:00:00', versions: ['>=1.0.0', '<1.13.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/easy_breadcrumb'
