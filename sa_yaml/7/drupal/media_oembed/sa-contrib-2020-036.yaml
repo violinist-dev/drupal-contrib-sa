@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2020-036'
+title: 'Media: oEmbed - Critical - Remote Code Execution - SA-CONTRIB-2020-036'
+branches:
+    2.8.x: { time: '2020-11-18 12:00:00', versions: ['>=2.0.0', '<2.8.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/media_oembed'

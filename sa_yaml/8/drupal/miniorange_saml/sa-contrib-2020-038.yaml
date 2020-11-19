@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2020-038'
+title: 'SAML SP 2.0 Single Sign On (SSO) - SAML Service Provider - Critical - Access bypass - SA-CONTRIB-2020-038'
+branches:
+    2.14.x: { time: '2020-11-18 12:00:00', versions: ['>=2.0.0', '<2.14.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/miniorange_saml'
