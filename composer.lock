@@ -3669,12 +3669,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/security-advisories.git",
-                "reference": "7e3fd40547c67e99ca85cc11bcb2f13e6f453aa8"
+                "reference": "83e0070d29a6fabc79c936461ed09f7b488f0bc4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/security-advisories/zipball/7e3fd40547c67e99ca85cc11bcb2f13e6f453aa8",
-                "reference": "7e3fd40547c67e99ca85cc11bcb2f13e6f453aa8",
+                "url": "https://api.github.com/repos/FriendsOfPHP/security-advisories/zipball/83e0070d29a6fabc79c936461ed09f7b488f0bc4",
+                "reference": "83e0070d29a6fabc79c936461ed09f7b488f0bc4",
                 "shasum": ""
             },
             "require-dev": {
@@ -3694,7 +3694,7 @@
                 }
             ],
             "description": "Database of known security vulnerabilities in various PHP projects and libraries",
-            "time": "2020-11-22T15:17:07+00:00"
+            "time": "2020-11-30T16:48:48+00:00"
         },
         {
             "name": "symfony/filesystem",
