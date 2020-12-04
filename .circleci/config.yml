@@ -1,8 +1,4 @@
-# PHP CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-php/ for more details
-#
-version: 2
+version: 2.1
 jobs:
   build:
     docker:
@@ -23,10 +19,10 @@ jobs:
           paths:
             - ./vendor
       - run: 
-        command: |
-          cp vendor/sensiolabs/security-advisories/validator.php sa_yaml/8/
-          sed -i "s/__DIR__.'/__DIR__.'\/..\/../g" sa_yaml/8/validator.php
-          cp vendor/sensiolabs/security-advisories/validator.php sa_yaml/7/
-          sed -i "s/__DIR__.'/__DIR__.'\/..\/../g" sa_yaml/7/validator.php
-          php sa_yaml/8/validator.php
-          php sa_yaml/7/validator.php
+          command: |
+            cp vendor/sensiolabs/security-advisories/validator.php sa_yaml/8/
+            sed -i "s/__DIR__.'/__DIR__.'\/..\/../g" sa_yaml/8/validator.php
+            cp vendor/sensiolabs/security-advisories/validator.php sa_yaml/7/
+            sed -i "s/__DIR__.'/__DIR__.'\/..\/../g" sa_yaml/7/validator.php
+            php sa_yaml/8/validator.php
+            php sa_yaml/7/validator.php
