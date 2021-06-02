@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2021-014'
+title: 'OpenID Connect / OAuth client - Moderately critical - Access bypass - SA-CONTRIB-2021-014'
+branches:
+    1.1.x: { time: '2021-06-02 12:00:00', versions: ['>=1.0.0', '<1.1.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/openid_connect'

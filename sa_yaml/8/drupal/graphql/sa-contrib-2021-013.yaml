@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2021-013'
+title: 'GraphQL - Moderately critical - Information Disclosure - SA-CONTRIB-2021-013'
+branches:
+    4.1.x: { time: '2021-06-02 12:00:00', versions: ['>=4.0.0', '<4.1.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/graphql'
