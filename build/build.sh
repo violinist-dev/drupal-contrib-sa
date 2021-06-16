@@ -12,14 +12,3 @@ php application.php drupal-contrib-sa:complete > /dev/null
 
 # This will checkout all deleted files, but not untracked.
 git checkout sa_yaml/ --quiet
-
-if [ ! -z "$(git status --porcelain)" ]
-then
-  git add sa_yaml
-  git checkout -b autoupdate/$DATE
-  git config --global user.email "committer@example.com"
-  git config --global user.name "Auto Commit"
-  git commit -m "Drupal Contrib SA $DATE"
-  git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
-  git push github autoupdate/$DATE
-fi
