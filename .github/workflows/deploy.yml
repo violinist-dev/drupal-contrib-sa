@@ -19,7 +19,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
       - name: yaml permissions
-        run: sudo chmod -R 644 sa_yaml
+        run: sudo chmod -R g+w sa_yaml
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v3
