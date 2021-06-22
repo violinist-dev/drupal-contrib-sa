@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2021-015'
+title: 'Chaos Tool Suite (ctools) - Moderately critical - Access bypass - SA-CONTRIB-2021-015'
+branches:
+    3.7.x: { time: '2021-06-16 12:00:00', versions: ['>=3.0.0', '<3.7.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/ctools'
