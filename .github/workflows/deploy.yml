@@ -29,6 +29,7 @@ jobs:
           git add sa_yaml
       - name: Create Pull Request
         with:
-          title: "Drupal Contrib ${{ steps.date.outputs.date }}"
+          commit-message: "Drupal Contrib SA ${{ steps.date.outputs.date }}"
+          title: "Drupal Contrib SA ${{ steps.date.outputs.date }}"
         id: cpr
         uses: peter-evans/create-pull-request@v3
