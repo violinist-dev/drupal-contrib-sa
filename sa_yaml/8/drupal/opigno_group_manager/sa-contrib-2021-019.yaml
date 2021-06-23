@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2021-019'
+title: 'Opigno group manager - Less critical - UI redressing (clickjacking) - SA-CONTRIB-2021-019'
+branches:
+    1.8.x: { time: '2021-06-23 12:00:00', versions: ['>=1.0.0', '<1.8.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/opigno_group_manager'
