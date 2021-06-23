@@ -12,6 +12,9 @@ jobs:
     name: Build SAs nightly
     runs-on: ubuntu-latest
     steps:
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - uses: actions/checkout@v2
       - uses: ./deploy/
         env:
@@ -25,5 +28,6 @@ jobs:
           git checkout sa_yaml
           git add sa_yaml
       - name: Create Pull Request
+        title: "Drupal Contrib ${{ steps.date.outputs.date }}"
         id: cpr
         uses: peter-evans/create-pull-request@v3
