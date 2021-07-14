@@ -80,7 +80,7 @@ class PackageCompleter
             ];
             $repo = 'https://packages.drupal.org/8';
             $key = 8;
-            if (strpos($branch, '8.x-') === false) {
+            if (strpos($branch, '7.x') === 0) {
                 $repo = 'https://packages.drupal.org/7';
                 $key = 7;
             }

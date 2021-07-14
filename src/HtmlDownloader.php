@@ -2,8 +2,6 @@
 
 namespace Violinist\DrupalContribSA;
 
-use Symfony\Component\DomCrawler\Crawler;
-
 class HtmlDownloader extends HtmlDownloaderBase
 {
     private $page = 0;
@@ -55,7 +53,6 @@ class HtmlDownloader extends HtmlDownloaderBase
     public function hasMore()
     {
         return !$this->lastPage;
-
     }
 
 }

@@ -5,6 +5,7 @@ namespace Violinist\DrupalContribSA;
 use GuzzleHttp\Client;
 use Symfony\Component\Cache\Simple\FilesystemCache;
 use Symfony\Component\DomCrawler\Crawler;
+use vierbergenlars\SemVer\version;
 use Violinist\DrupalContribSA\Exception\NoLinksException;
 use Violinist\DrupalContribSA\Exception\UnsupportedVersionException;
 
@@ -26,6 +27,8 @@ class ContribSaParser
 
     private $versions = [];
 
+    private $projectName;
+
     public function __construct(Crawler $crawler)
     {
         $this->crawler = $crawler;
@@ -41,8 +44,16 @@ class ContribSaParser
         $this->httpClient = $client;
     }
 
+    public function setProjectName($name)
+    {
+        $this->projectName = $name;
+    }
+
     public function getProjectName()
     {
+        if (!empty($this->projectName)) {
+            return $this->projectName;
+        }
         // First try the entity reference field.
         $ref = $this->crawler->filter('.field-name-field-project a');
         if ($ref->count()) {
@@ -75,6 +86,11 @@ class ContribSaParser
             $href = $potential_project_links->getNode(0)->getAttribute('href');
             return $this->getProjectNameFromLink($href);
         }
+        if ($potential_project_links->count()) {
+            // I guess several links is different from no links.
+            // @todo: Own Exception?
+            throw new NoLinksException();
+        }
         throw new \Exception('No project name found');
     }
 
@@ -93,9 +109,16 @@ class ContribSaParser
         $links = $this->getVersionLinks();
         foreach ($links as $link) {
             $parts = explode('/', $link);
-            $version_tag_parts = explode('-', $parts[count($parts) - 1]);
+            $version_part = $parts[count($parts) - 1];
+            $version_tag_parts = explode('-', $version_part);
             if (count($version_tag_parts) > 1) {
                 $versions[] = sprintf('%s.0', $version_tag_parts[1]);
+                continue;
+            }
+            // Could also be semantic version.
+            $semantic_array = explode('.', $version_part);
+            if (count($semantic_array) === 3) {
+                $versions[] = $version_part;
             }
         }
         return $versions;
@@ -193,11 +216,25 @@ class ContribSaParser
                     continue;
                 }
             }
+            try {
+                new version($branch_tag);
+                $semantic_array = explode('.', str_replace('-', '', $branch_tag));
+                if (count($semantic_array) === 3) {
+                    $branches[] = sprintf('%s.x', $semantic_array[0]);
+                    continue;
+                }
+            } catch (\Throwable $e) {
+                // Not semver.
+            }
             $branch_tag_parts = explode('-', $branch_tag);
             if (empty($branch_tag_parts[1])) {
                 continue;
             }
             if (!empty($branch_tag_parts[2])) {
+                continue;
+            }
+            // This peculiar exception is not really a version, is it?
+            if (strpos($branch_tag_parts[0], 'published?to_branch=8.x') !== false) {
                 continue;
             }
             $this->versions[] = $branch_tag_parts;
