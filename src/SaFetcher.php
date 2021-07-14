@@ -35,6 +35,10 @@ class SaFetcher extends HtmlDownloaderBase
             $parser->setHttpClient($this->client);
             $parser->setlinksSelector('a');
             try {
+                $name = null;
+                if ($url === 'https://www.drupal.org/sa-contrib-2019-024') {
+                    $name = 'tmgmt';
+                }
                 $name = $parser->getProjectName();
                 // This is a redirect.
                 if ($name === 'eu-cookie-compliance') {
@@ -45,9 +49,6 @@ class SaFetcher extends HtmlDownloaderBase
                 }
                 if ($url === 'https://www.drupal.org/sa-contrib-2018-067') {
                     $name = 'workbench_moderation';
-                }
-                if ($url === 'https://www.drupal.org/sa-contrib-2019-024') {
-                    $name = 'tmgmt';
                 }
             }
             catch (NoLinksException $e) {
@@ -63,8 +64,11 @@ class SaFetcher extends HtmlDownloaderBase
                 if (!empty($project_json->field_project_machine_name)) {
                     $name = $project_json->field_project_machine_name;
                 } else {
-                    throw $e;
+                    if (!$name) {
+                        throw $e;
+                    }
                 }
+                $parser->setProjectName($name);
             }
             $date = \DateTime::createFromFormat('U', $json->created);
             $date->setTimezone(new \DateTimeZone('+0000'));

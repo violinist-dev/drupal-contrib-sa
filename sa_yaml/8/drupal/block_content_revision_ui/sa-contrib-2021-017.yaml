@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2021-017'
+title: 'Block Content Revision UI - Moderately critical - Access bypass - SA-CONTRIB-2021-017'
+branches:
+    2.127.x: { time: '2021-06-16 12:00:00', versions: ['>=2.0.0', '<2.127.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/block_content_revision_ui'

@@ -15,7 +15,8 @@
     "symfony/cache": "^3.4",
     "symfony/console": "^4.2",
     "symfony/dependency-injection": "^4.2",
-    "ext-json": "*"
+    "ext-json": "*",
+    "vierbergenlars/php-semver": "^3.0"
   },
   "autoload": {
     "psr-4": {
