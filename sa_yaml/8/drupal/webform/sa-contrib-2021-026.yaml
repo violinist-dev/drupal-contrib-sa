@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2021-026'
+title: 'Webform - Moderately critical - Cross Site Scripting - SA-CONTRIB-2021-026'
+branches:
+    5.28.x: { time: '2021-08-25 12:00:00', versions: ['>=5.0.0', '<5.28.0'] }
+    libraries.0.x: { time: '2021-08-25 12:00:00', versions: ['>=0.0.0', '<libraries.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/webform'
