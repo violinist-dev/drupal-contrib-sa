@@ -213,6 +213,7 @@ class ContribSaParser
             // That means the project is unsupported.
             return $branches;
         }
+        $links = array_filter($links);
         foreach ($links as $link) {
             $link_parts = explode('/', $link);
             $branch_tag = $link_parts[count($link_parts) - 1];
@@ -320,6 +321,8 @@ class ContribSaParser
     protected function getProjectNameFromLink($link)
     {
         $parts = explode('/', $link);
+        $parts = array_filter($parts);
+        $parts = array_values($parts);
         return $parts[count($parts) - 1];
     }
 }
