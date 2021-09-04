@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2021-025'
+title: 'Admin Toolbar - Moderately critical - Cross Site Scripting, Access Bypass - SA-CONTRIB-2021-025'
+branches:
+    3.0.x: { time: '2021-08-25 12:00:00', versions: ['>=3.0.0', '<3.0.2'] }
+    2.5.x: { time: '2021-08-25 12:00:00', versions: ['>=2.0.0', '<2.5.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/admin_toolbar'
