@@ -99,8 +99,13 @@ class ContribSaParser
         // @todo: Not even sure I need the rest of this function now?
         $versions = [];
         if (!empty($this->versions)) {
-            foreach ($this->versions as $version_array) {
-                $versions[] = sprintf('%s.0', $version_array[1]);
+            foreach ($this->versions as $version_value) {
+                if (is_array($version_value)) {
+                    $versions[] = sprintf('%s.0', $version_value[1]);
+                }
+                else {
+                    $versions[] = $version_value;
+                }
             }
         }
         if (!empty($versions)) {
@@ -156,8 +161,11 @@ class ContribSaParser
 
     protected function getLinkHrefs(Crawler $nodes)
     {
-        return $nodes->each(function (Crawler $node) {
+        $links = $nodes->each(function (Crawler $node) {
             return $node->attr('href');
+        });
+        return array_filter($links, function ($link) {
+           return strpos($link, 'drupal.org/project');
         });
     }
 
@@ -221,6 +229,7 @@ class ContribSaParser
                 $semantic_array = explode('.', str_replace('-', '', $branch_tag));
                 if (count($semantic_array) === 3) {
                     $branches[] = sprintf('%s.x', $semantic_array[0]);
+                    $this->versions[] = $branch_tag;
                     continue;
                 }
             } catch (\Throwable $e) {
