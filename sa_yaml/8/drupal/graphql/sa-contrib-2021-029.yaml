@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2021-029'
+title: 'GraphQL - Moderately critical - Access bypass - SA-CONTRIB-2021-029'
+branches:
+    4.2.x: { time: '2021-09-15 12:00:00', versions: ['>=4.0.0', '<4.2.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/graphql'
