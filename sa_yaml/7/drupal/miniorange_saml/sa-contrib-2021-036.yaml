@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2021-036'
+title: 'SAML SP 2.0 Single Sign On (SSO) - SAML Service Provider - Moderately critical - Multiple vulnerabilities - SA-CONTRIB-2021-036'
+branches:
+    2.60.x: { time: '2021-09-22 12:00:00', versions: ['>=2.0.0', '<2.60.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/miniorange_saml'

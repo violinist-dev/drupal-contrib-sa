@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2021-037'
+title: 'Domain Group - Critical - Access bypass - SA-CONTRIB-2021-037'
+branches:
+    1.04.x: { time: '2021-09-22 12:00:00', versions: ['>=1.0.0', '<1.04.0'] }
+    2.0.x: { time: '2021-09-22 12:00:00', versions: ['>=2.0.0', '<2.0.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/domain_group'

@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2021-039'
+title: 'The Better Mega Menu - Moderately critical - Cross Site Scripting - SA-CONTRIB-2021-039'
+branches:
+    1.4.x: { time: '2021-09-22 12:00:00', versions: ['>=1.0.0', '<1.4.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/tb_megamenu'
