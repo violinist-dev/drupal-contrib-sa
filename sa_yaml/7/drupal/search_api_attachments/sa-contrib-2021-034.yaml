@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2021-034'
+title: 'Search API attachments - Critical - Arbitrary PHP code execution - SA-CONTRIB-2021-034'
+branches:
+    1.19.x: { time: '2021-09-22 12:00:00', versions: ['>=1.0.0', '<1.19.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/search_api_attachments'

@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2021-031'
+title: 'Client-side Hierarchical Select - Moderately critical - Cross-site scripting - SA-CONTRIB-2021-031'
+branches:
+    3.5.x: { time: '2021-09-22 12:00:00', versions: ['>=3.0.0', '<3.5.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/cshs'

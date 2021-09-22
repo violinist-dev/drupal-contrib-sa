@@ -1,0 +1,8 @@
+link: 'https://www.drupal.org/sa-contrib-2021-033'
+title: 'File Extractor - Critical - Arbitrary PHP code execution - SA-CONTRIB-2021-033'
+branches:
+    2.0.x: { time: '2021-09-22 12:00:00', versions: ['>=2.0.0', '<2.0.3'] }
+    3.0.x: { time: '2021-09-22 12:00:00', versions: ['>=3.0.0', '<3.0.1'] }
+    4.0.x: { time: '2021-09-22 12:00:00', versions: ['>=4.0.0', '<4.0.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/file_extractor'

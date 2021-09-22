@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2021-032'
+title: 'Commerce Core - Moderately critical - Access bypass, Information Disclosure - SA-CONTRIB-2021-032'
+branches:
+    2.27.x: { time: '2021-09-22 12:00:00', versions: ['>=2.0.0', '<2.27.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/commerce'
