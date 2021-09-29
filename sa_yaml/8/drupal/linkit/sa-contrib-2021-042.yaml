@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2021-042'
+title: 'Linkit - Moderately critical - Cross Site Scripting - SA-CONTRIB-2021-042'
+branches:
+    4.4.x: { time: '2021-09-29 12:00:00', versions: ['>=4.0.0', '<4.4.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/linkit'
