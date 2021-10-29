@@ -700,16 +700,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v4.4.31",
+            "version": "v4.4.33",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "75dd7094870feaa5be9ed2b6b1efcfc2b7d3b9b4"
+                "reference": "ad364e599a4059db29c0aa424537e6ba668f54e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/75dd7094870feaa5be9ed2b6b1efcfc2b7d3b9b4",
-                "reference": "75dd7094870feaa5be9ed2b6b1efcfc2b7d3b9b4",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/ad364e599a4059db29c0aa424537e6ba668f54e6",
+                "reference": "ad364e599a4059db29c0aa424537e6ba668f54e6",
                 "shasum": ""
             },
             "require": {
@@ -779,7 +779,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-09-21T06:20:06+00:00"
+            "time": "2021-10-17T07:04:24+00:00"
         },
         {
             "name": "symfony/dom-crawler",
