@@ -9,10 +9,10 @@
   "license": "MIT",
   "require": {
     "guzzlehttp/guzzle": "^6.3",
-    "symfony/dom-crawler": "^3.4",
-    "symfony/css-selector": "^3.4",
-    "symfony/yaml": "^3.4",
-    "symfony/cache": "^3.4",
+    "symfony/dom-crawler": "^4.2",
+    "symfony/css-selector": "^4.2",
+    "symfony/yaml": "^4.2",
+    "symfony/cache": "^4.2",
     "symfony/console": "^4.2",
     "symfony/dependency-injection": "^4.2",
     "ext-json": "*",
@@ -31,5 +31,21 @@
   "scripts": {
     "test": "@composer lint && phpunit && phpstan analyse src test",
     "lint": "phpcs -p -n"
+  },
+  "extra": {
+    "violinist": {
+      "bundled_packages": {
+        "symfony/console": [
+          "symfony/*"
+        ]
+      },
+      "blocklist": [
+        "symfony/dom-crawler",
+        "symfony/css-selector",
+        "symfony/yaml",
+        "symfony/cache",
+        "symfony/dependency-injection"
+      ]
+    }
   }
 }
