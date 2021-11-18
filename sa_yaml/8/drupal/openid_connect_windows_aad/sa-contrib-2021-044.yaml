@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2021-044'
+title: 'OpenID Connect Microsoft Azure Active Directory client - Moderately critical - Access Bypass - SA-CONTRIB-2021-044'
+branches:
+    1.4.x: { time: '2021-11-17 12:00:00', versions: ['>=1.0.0', '<1.4.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/openid_connect_windows_aad'
