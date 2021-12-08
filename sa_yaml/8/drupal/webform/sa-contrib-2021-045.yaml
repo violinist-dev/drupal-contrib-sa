@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2021-045'
+title: 'Webform - Critical - Cross Site Scripting, Access Bypass - SA-CONTRIB-2021-045'
+branches:
+    6.1.x: { time: '2021-12-08 12:00:00', versions: ['>=6.0.0', '<6.1.2'] }
+    6.0.x: { time: '2021-12-08 12:00:00', versions: ['>=6.0.0', '<6.0.6'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/webform'
