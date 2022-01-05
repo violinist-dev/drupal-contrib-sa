@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2022-003'
+title: 'Wysiwyg - Moderately critical - Cross site scripting - SA-CONTRIB-2022-003'
+branches:
+    2.9.x: { time: '2022-01-05 12:00:00', versions: ['>=2.0.0', '<2.9.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/wysiwyg'

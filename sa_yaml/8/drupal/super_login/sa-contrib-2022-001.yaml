@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2022-001'
+title: 'Super Login - Critical - Access bypass - SA-CONTRIB-2022-001'
+branches:
+    1.7.x: { time: '2022-01-05 12:00:00', versions: ['>=1.0.0', '<1.7.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/super_login'
