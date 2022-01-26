@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2022-014'
+title: 'Private Taxonomy Terms - Critical - Access bypass, Information Disclosure, Multiple vulnerabilities - SA-CONTRIB-2022-014'
+branches:
+    2.5.x: { time: '2022-01-26 12:00:00', versions: ['>=2.0.0', '<2.5.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/private_taxonomy'
