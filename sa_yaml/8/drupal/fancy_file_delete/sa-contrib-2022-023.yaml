@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2022-023'
+title: 'Fancy File Delete - Moderately critical - Access Bypass - SA-CONTRIB-2022-023'
+branches:
+    2.0.x: { time: '2022-02-09 12:00:00', versions: ['>=2.0.0', '<2.0.7'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/fancy_file_delete'
