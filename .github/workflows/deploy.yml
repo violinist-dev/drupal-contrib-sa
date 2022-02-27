@@ -27,7 +27,6 @@ jobs:
         run: |
           sudo chmod -R 777 sa_yaml
           git status
-          git checkout sa_yaml
           git add sa_yaml
       - name: Create Pull Request
         with:
