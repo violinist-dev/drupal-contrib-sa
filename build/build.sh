@@ -12,3 +12,6 @@ php application.php drupal-contrib-sa:complete > /dev/null
 
 # Do not commit deletions.
 git diff --no-renames --name-only --diff-filter=D -z | xargs -0 git checkout --
+
+# These have crap version names.
+git checkout sa_yaml/8/drupal/svg_formatter/sa-contrib-2018-027.yaml
