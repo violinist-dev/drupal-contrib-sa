@@ -25,7 +25,7 @@ jobs:
           GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
       - name: yaml permissions
         run: |
-          sudo chmod -R 0644 sa_yaml
+          sudo chmod -R 777 sa_yaml
           git status
           git add sa_yaml
       - name: Create Pull Request
