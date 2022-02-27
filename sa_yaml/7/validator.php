@@ -63,7 +63,12 @@ final class Validate extends Command
         };
 
         $isAcceptableVersionConstraint = function ($versionString) {
-            return (bool) preg_match('/^(\\<|\\>)(=){0,1}(([1-9]\d*)|0)(\.(([1-9]\d*)|0))*(-(alpha|beta|rc)[1-9]\d*){0,1}$/', $versionString);
+            return (bool) preg_match('/^
+                [<>]=?
+                (([1-9]\d*)|0)
+                (\.(([1-9]\d*)|0))*
+                (-(alpha|beta|rc|p(atch)?)[1-9]\d*)?
+            $/x', $versionString);
         };
 
         $messages = array();
@@ -152,7 +157,7 @@ final class Validate extends Command
                 $upperBoundWithoutLowerBound = null;
 
                 foreach ($data['branches'] as $name => $branch) {
-                    if (!preg_match('/^([\d\.\-]+(\.x)?(\-dev)?|master)$/', $name)) {
+                    if (!preg_match('/^([\d.\-]+(\.x)?(-dev)?|master)$/', $name)) {
                         $messages[$path][] = sprintf('Invalid branch name "%s".', $name);
                     }
 
@@ -179,10 +184,20 @@ final class Validate extends Command
                             }
 
                             if ('<' === substr($version, 0, 1)) {
+                                if (null !== $upperBound) {
+                                    $messages[$path][] = sprintf('"versions" cannot have multiple upper bounds for branch "%s".', $name);
+                                    continue;
+                                }
+
                                 $upperBound = $version;
                                 continue;
                             }
                             if ('>' === substr($version, 0, 1)) {
+                                if ($hasMin) {
+                                    $messages[$path][] = sprintf('"versions" cannot have multiple lower bounds for branch "%s".', $name);
+                                    continue;
+                                }
+
                                 $hasMin = true;
                             }
                         }
