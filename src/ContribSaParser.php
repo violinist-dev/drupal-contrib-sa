@@ -165,7 +165,7 @@ class ContribSaParser
             return $node->attr('href');
         });
         return array_filter($links, function ($link) {
-           return strpos($link, 'drupal.org/project');
+           return strpos($link, 'drupal.org/project') || strpos($link, '/project/') === 0;
         });
     }
 
