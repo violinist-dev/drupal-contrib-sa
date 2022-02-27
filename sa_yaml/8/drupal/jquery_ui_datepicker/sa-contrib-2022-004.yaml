@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2022-004'
+title: 'jQuery UI Datepicker - Moderately critical - Cross Site Scripting - SA-CONTRIB-2022-004'
+branches:
+    1.2.x: { time: '2022-01-19 12:00:00', versions: ['>=1.0.0', '<1.2.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/jquery_ui_datepicker'
