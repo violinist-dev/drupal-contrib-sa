@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2022-031'
+title: 'Role Delegation - Moderately critical - Privilege escalation - SA-CONTRIB-2022-031'
+branches:
+    1.3.x: { time: '2022-03-23 12:00:00', versions: ['>=1.0.0', '<1.3.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/role_delegation'
