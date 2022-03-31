@@ -1,7 +1,7 @@
 link: 'https://www.drupal.org/sa-contrib-2022-032'
 title: 'Anti Spam by CleanTalk - Moderately critical - SQL Injection - SA-CONTRIB-2022-032'
 branches:
-    4.13.x: { time: '2022-03-30 12:00:00', versions: ['>=4.0.0', '<4.13.0'] }
-    9.1.x: { time: '2022-03-30 12:00:00', versions: ['>=9.0.0', '<9.1.19'] }
+    4.15.x: { time: '2022-03-30 12:00:00', versions: ['>=4.0.0', '<4.15.0'] }
+    9.1.x: { time: '2022-03-30 12:00:00', versions: ['>=9.0.0', '<9.1.21'] }
 composer-repository: 'https://packages.drupal.org/8'
 reference: 'composer://drupal/cleantalk'
