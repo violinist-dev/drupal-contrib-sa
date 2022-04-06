@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2022-015'
+title: 'Exif - Critical - Remote code execution - SA-CONTRIB-2022-015'
+branches:
+    1.10.x: { time: '2022-01-25 12:00:00', versions: ['>=1.0.0', '<1.10.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/exif'
