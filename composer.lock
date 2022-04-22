@@ -42,12 +42,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -100,12 +100,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Promise\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -189,12 +189,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Psr7\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -492,9 +492,6 @@
                 "psr-16",
                 "simple-cache"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/simple-cache/tree/master"
-            },
             "time": "2017-10-23T01:57:42+00:00"
         },
         {
@@ -940,16 +937,16 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v2.5.0",
+            "version": "v2.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "6f981ee24cf69ee7ce9736146d1c57c2780598a8"
+                "reference": "e8b495ea28c1d97b5e0c121748d6f9b53d075c66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/6f981ee24cf69ee7ce9736146d1c57c2780598a8",
-                "reference": "6f981ee24cf69ee7ce9736146d1c57c2780598a8",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/e8b495ea28c1d97b5e0c121748d6f9b53d075c66",
+                "reference": "e8b495ea28c1d97b5e0c121748d6f9b53d075c66",
                 "shasum": ""
             },
             "require": {
@@ -1000,7 +997,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-07-12T14:48:14+00:00"
+            "time": "2022-01-02T09:53:40+00:00"
         },
         {
             "name": "symfony/dom-crawler",
@@ -1075,7 +1072,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -1107,12 +1104,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1185,12 +1182,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1267,12 +1264,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -1425,12 +1422,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php72\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1871,8 +1868,8 @@
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "vierbergenlars\\SemVer\\": "src/",
-                    "vierbergenlars\\LibJs\\": "src/"
+                    "vierbergenlars\\LibJs\\": "src/",
+                    "vierbergenlars\\SemVer\\": "src/"
                 },
                 "classmap": [
                     "src/vierbergenlars/SemVer/internal.php"
@@ -1894,10 +1891,6 @@
                 "semver",
                 "versioning"
             ],
-            "support": {
-                "issues": "https://github.com/vierbergenlars/php-semver/issues",
-                "source": "https://github.com/vierbergenlars/php-semver/tree/master"
-            },
             "time": "2017-07-11T09:53:59+00:00"
         }
     ],
@@ -1975,16 +1968,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "1.10.25",
+            "version": "1.10.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "892838f84440b4851ec7e57221d52cb65a8991a5"
+                "reference": "3e196135eacf9e519a6b00986bc6fe6aff977997"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/892838f84440b4851ec7e57221d52cb65a8991a5",
-                "reference": "892838f84440b4851ec7e57221d52cb65a8991a5",
+                "url": "https://api.github.com/repos/composer/composer/zipball/3e196135eacf9e519a6b00986bc6fe6aff977997",
+                "reference": "3e196135eacf9e519a6b00986bc6fe6aff977997",
                 "shasum": ""
             },
             "require": {
@@ -2065,7 +2058,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-21T09:02:15+00:00"
+            "time": "2022-04-13T14:39:56+00:00"
         },
         {
             "name": "composer/semver",
@@ -2343,16 +2336,16 @@
         },
         {
             "name": "justinrainbow/json-schema",
-            "version": "5.2.11",
+            "version": "5.2.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/justinrainbow/json-schema.git",
-                "reference": "2ab6744b7296ded80f8cc4f9509abbff393399aa"
+                "reference": "ad87d5a5ca981228e0e205c2bc7dfb8e24559b60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/2ab6744b7296ded80f8cc4f9509abbff393399aa",
-                "reference": "2ab6744b7296ded80f8cc4f9509abbff393399aa",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/ad87d5a5ca981228e0e205c2bc7dfb8e24559b60",
+                "reference": "ad87d5a5ca981228e0e205c2bc7dfb8e24559b60",
                 "shasum": ""
             },
             "require": {
@@ -2405,7 +2398,7 @@
                 "json",
                 "schema"
             ],
-            "time": "2021-07-22T09:24:00+00:00"
+            "time": "2022-04-13T08:02:27+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -2434,12 +2427,12 @@
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "DeepCopy\\": "src/DeepCopy/"
-                },
                 "files": [
                     "src/DeepCopy/deep_copy.php"
-                ]
+                ],
+                "psr-4": {
+                    "DeepCopy\\": "src/DeepCopy/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -3759,23 +3752,24 @@
         },
         {
             "name": "seld/jsonlint",
-            "version": "1.8.3",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/jsonlint.git",
-                "reference": "9ad6ce79c342fbd44df10ea95511a1b24dee5b57"
+                "reference": "4211420d25eba80712bff236a98960ef68b866b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/9ad6ce79c342fbd44df10ea95511a1b24dee5b57",
-                "reference": "9ad6ce79c342fbd44df10ea95511a1b24dee5b57",
+                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/4211420d25eba80712bff236a98960ef68b866b7",
+                "reference": "4211420d25eba80712bff236a98960ef68b866b7",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.3 || ^7.0 || ^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
+                "phpstan/phpstan": "^1.5",
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0 || ^8.5.13"
             },
             "bin": [
                 "bin/jsonlint"
@@ -3814,7 +3808,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-11T09:19:24+00:00"
+            "time": "2022-04-01T13:37:23+00:00"
         },
         {
             "name": "seld/phar-utils",
@@ -3866,12 +3860,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/security-advisories.git",
-                "reference": "017f3349111bfd86e5cdc062880086d16174c3f1"
+                "reference": "904a28aade75724801ad624a87597fd218a546d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/security-advisories/zipball/017f3349111bfd86e5cdc062880086d16174c3f1",
-                "reference": "017f3349111bfd86e5cdc062880086d16174c3f1",
+                "url": "https://api.github.com/repos/FriendsOfPHP/security-advisories/zipball/904a28aade75724801ad624a87597fd218a546d6",
+                "reference": "904a28aade75724801ad624a87597fd218a546d6",
                 "shasum": ""
             },
             "require-dev": {
@@ -3891,20 +3885,20 @@
                 }
             ],
             "description": "Database of known security vulnerabilities in various PHP projects and libraries",
-            "time": "2022-03-29T16:46:51+00:00"
+            "time": "2022-04-14T08:01:58+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v5.4.0",
+            "version": "v5.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "731f917dc31edcffec2c6a777f3698c33bea8f01"
+                "reference": "3a4442138d80c9f7b600fb297534ac718b61d37f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/731f917dc31edcffec2c6a777f3698c33bea8f01",
-                "reference": "731f917dc31edcffec2c6a777f3698c33bea8f01",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/3a4442138d80c9f7b600fb297534ac718b61d37f",
+                "reference": "3a4442138d80c9f7b600fb297534ac718b61d37f",
                 "shasum": ""
             },
             "require": {
@@ -3952,20 +3946,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-28T13:39:27+00:00"
+            "time": "2022-04-01T12:33:59+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v5.4.2",
+            "version": "v5.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "e77046c252be48c48a40816187ed527703c8f76c"
+                "reference": "231313534dded84c7ecaa79d14bc5da4ccb69b7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/e77046c252be48c48a40816187ed527703c8f76c",
-                "reference": "e77046c252be48c48a40816187ed527703c8f76c",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/231313534dded84c7ecaa79d14bc5da4ccb69b7d",
+                "reference": "231313534dded84c7ecaa79d14bc5da4ccb69b7d",
                 "shasum": ""
             },
             "require": {
@@ -4012,20 +4006,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-12-15T11:06:13+00:00"
+            "time": "2022-01-26T16:34:36+00:00"
         },
         {
             "name": "symfony/process",
-            "version": "v5.4.2",
+            "version": "v5.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "2b3ba8722c4aaf3e88011be5e7f48710088fb5e4"
+                "reference": "38a44b2517b470a436e1c944bf9b9ba3961137fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/2b3ba8722c4aaf3e88011be5e7f48710088fb5e4",
-                "reference": "2b3ba8722c4aaf3e88011be5e7f48710088fb5e4",
+                "url": "https://api.github.com/repos/symfony/process/zipball/38a44b2517b470a436e1c944bf9b9ba3961137fb",
+                "reference": "38a44b2517b470a436e1c944bf9b9ba3961137fb",
                 "shasum": ""
             },
             "require": {
@@ -4071,7 +4065,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-12-27T21:01:00+00:00"
+            "time": "2022-03-18T16:18:52+00:00"
         },
         {
             "name": "theseer/tokenizer",
