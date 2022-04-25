@@ -3,6 +3,7 @@
 namespace Violinist\DrupalContribSA;
 
 use Symfony\Component\DomCrawler\Crawler;
+use Violinist\DrupalContribSA\Exception\IgnoredProjectException;
 use Violinist\DrupalContribSA\Exception\NoLinksException;
 
 class SaFetcher extends HtmlDownloaderBase
@@ -19,6 +20,9 @@ class SaFetcher extends HtmlDownloaderBase
             $parser->setHttpClient($this->client);
             $parser->setCache($this->cache);
             $name = $parser->getProjectName();
+            if ($name === 'social') {
+                throw new IgnoredProjectException();
+            }
             $branches = $parser->getBranches();
             $time = $parser->getTime();
             $versions = $parser->getVersions();
