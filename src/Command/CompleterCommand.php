@@ -5,6 +5,7 @@ namespace Violinist\DrupalContribSA\Command;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Violinist\DrupalContribSA\Exception\IgnoredProjectException;
 use Violinist\DrupalContribSA\Exception\NoLinksException;
 use Violinist\DrupalContribSA\Exception\UnsupportedVersionException;
 use Violinist\DrupalContribSA\PackageCompleter;
@@ -30,7 +31,7 @@ class CompleterCommand extends Command
                 $output->writeln('Completing file ' . $filename);
                 $data = $this->completer->completeFiles($filename);
                 $this->completer->saveFiles($filename, $data);
-            } catch (UnsupportedVersionException $e) {
+            } catch (UnsupportedVersionException|IgnoredProjectException $e) {
                 // No worries.
                 unlink($filename);
                 continue;

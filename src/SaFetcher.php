@@ -3,6 +3,7 @@
 namespace Violinist\DrupalContribSA;
 
 use Symfony\Component\DomCrawler\Crawler;
+use Violinist\DrupalContribSA\Exception\IgnoredProjectException;
 use Violinist\DrupalContribSA\Exception\NoLinksException;
 
 class SaFetcher extends HtmlDownloaderBase
@@ -19,6 +20,9 @@ class SaFetcher extends HtmlDownloaderBase
             $parser->setHttpClient($this->client);
             $parser->setCache($this->cache);
             $name = $parser->getProjectName();
+            if ($name === 'social' || $name === 'dvg') {
+                throw new IgnoredProjectException();
+            }
             $branches = $parser->getBranches();
             $time = $parser->getTime();
             $versions = $parser->getVersions();
@@ -50,11 +54,12 @@ class SaFetcher extends HtmlDownloaderBase
                 if ($url === 'https://www.drupal.org/sa-contrib-2018-067') {
                     $name = 'workbench_moderation';
                 }
-            }
-            catch (NoLinksException $e) {
+                if ($name === 'social' || $name === 'dvg') {
+                    throw new IgnoredProjectException();
+                }
+            } catch (NoLinksException|IgnoredProjectException $e) {
                 throw $e;
-            }
-            catch (\Throwable $e) {
+            } catch (\Throwable $e) {
                 if (!empty($json->field_project->uri) && $json->field_project->uri === 'https://www.drupal.org/api-d7/node/807766') {
                     // That is not a specific project.
                     throw new NoLinksException();
