@@ -1,7 +1,0 @@
-link: 'https://www.drupal.org/sa-contrib-2021-011'
-title: 'Open Social - Critical - Authentication Bypass - SA-CONTRIB-2021-011'
-branches:
-    10.0.x: { time: '2021-06-02 12:00:00', versions: ['>=10.0.0', '<10.0.13'] }
-    10.1.x: { time: '2021-06-02 12:00:00', versions: ['>=10.0.0', '<10.1.6'] }
-composer-repository: 'https://packages.drupal.org/8'
-reference: 'composer://drupal/social'
