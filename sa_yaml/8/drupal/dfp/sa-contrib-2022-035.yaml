@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2022-035'
+title: 'Doubleclick for Publishers (DFP) - Moderately critical - Cross site scripting - SA-CONTRIB-2022-035'
+branches:
+    1.2.x: { time: '2022-05-04 12:00:00', versions: ['>=1.0.0', '<1.2.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/dfp'
