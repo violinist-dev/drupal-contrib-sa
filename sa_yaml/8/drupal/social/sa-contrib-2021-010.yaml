@@ -1,0 +1,8 @@
+link: 'https://www.drupal.org/sa-contrib-2021-010'
+title: 'Open Social - Moderately critical - SQL Injection - SA-CONTRIB-2021-010'
+branches:
+    9.17.x: { time: '2021-06-02 12:00:00', versions: ['>=9.0.0', '<9.17.0'] }
+    10.0.x: { time: '2021-06-02 12:00:00', versions: ['>=10.0.0', '<10.0.13'] }
+    10.1.x: { time: '2021-06-02 12:00:00', versions: ['>=10.0.0', '<10.1.6'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/social'

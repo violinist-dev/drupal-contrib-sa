@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2019-031'
+title: 'Drupal voor Gemeenten - Moderately critical - Access Bypass - SA-CONTRIB-2019-031'
+branches:
+    1.9.x: { time: '2019-03-06 12:00:00', versions: ['>=1.0.0', '<1.9.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/dvg'
