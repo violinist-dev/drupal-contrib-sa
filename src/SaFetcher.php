@@ -85,6 +85,9 @@ class SaFetcher extends HtmlDownloaderBase
         $data = new SaData();
         $data->setTime($time);
         $data->setName($name);
+        if ($name === 'social' || $name === 'dvg') {
+            throw new IgnoredProjectException();
+        }
         $data->setBranches($branches);
         $data->setVersions($versions);
         return $data;
