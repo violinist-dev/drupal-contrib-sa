@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2022-044'
+title: 'Entity Browser Block - Moderately critical - Access bypass - SA-CONTRIB-2022-044'
+branches:
+    1.2.x: { time: '2022-05-25 12:00:00', versions: ['>=1.0.0', '<1.2.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/entity_browser_block'

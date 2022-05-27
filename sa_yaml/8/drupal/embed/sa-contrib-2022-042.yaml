@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2022-042'
+title: 'Embed - Moderately critical - Cross-Site Request Forgery - SA-CONTRIB-2022-042'
+branches:
+    1.5.x: { time: '2022-05-25 12:00:00', versions: ['>=1.0.0', '<1.5.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/embed'
