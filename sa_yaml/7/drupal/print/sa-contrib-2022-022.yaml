@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2022-022'
+title: 'Printer, email and PDF versions - Critical - Unsupported - SA-CONTRIB-2022-022'
+branches:
+    2.3.x: { time: '2022-01-25 12:00:00', versions: ['>=2.0.0', '<2.3.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/print'
