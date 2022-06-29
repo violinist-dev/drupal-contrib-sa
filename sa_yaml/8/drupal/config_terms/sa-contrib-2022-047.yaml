@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2022-047'
+title: 'Config Terms - Critical - Access bypass - SA-CONTRIB-2022-047'
+branches:
+    1.6.x: { time: '2022-06-29 12:00:00', versions: ['>=1.0.0', '<1.6.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/config_terms'
