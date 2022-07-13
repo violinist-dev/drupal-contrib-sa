@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2022-048'
+title: 'Entity Print - Moderately critical - Multiple: Remote Code Execution, Information disclosure - SA-CONTRIB-2022-048'
+branches:
+    2.6.x: { time: '2022-07-13 12:00:00', versions: ['>=2.0.0', '<2.6.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/entity_print'
