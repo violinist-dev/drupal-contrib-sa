@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2022-049'
+title: 'Context - Moderately critical - Cross Site Scripting - SA-CONTRIB-2022-049'
+branches:
+    3.11.x: { time: '2022-07-27 12:00:00', versions: ['>=3.0.0', '<3.11.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/context'

@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2022-050'
+title: 'PDF generator API - Moderately critical - Remote Code Execution - SA-CONTRIB-2022-050'
+branches:
+    2.2.x: { time: '2022-07-27 12:00:00', versions: ['>=2.0.0', '<2.2.2'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/pdf_api'
