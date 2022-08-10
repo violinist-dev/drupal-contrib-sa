@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2022-052'
+title: 'jQuery UI Checkboxradio - Moderately critical - Cross site scripting - SA-CONTRIB-2022-052'
+branches:
+    1.4.x: { time: '2022-08-10 12:00:00', versions: ['>=1.0.0', '<1.4.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/jquery_ui_checkboxradio'
