@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2022-055'
+title: 'Permissions by Term - Moderately critical - Access bypass - SA-CONTRIB-2022-055'
+branches:
+    3.1.x: { time: '2022-09-07 12:00:00', versions: ['>=3.0.0', '<3.1.19'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/permissions_by_term'
