@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2022-058'
+title: 'Twig Field Value - Moderately critical - Access bypass - SA-CONTRIB-2022-058'
+branches:
+    2.0.x: { time: '2022-10-12 12:00:00', versions: ['>=2.0.0', '<2.0.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/twig_field_value'
