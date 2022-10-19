@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2022-059'
+title: 'Search API - Moderately critical - Information Disclosure - SA-CONTRIB-2022-059'
+branches:
+    1.27.x: { time: '2022-10-19 12:00:00', versions: ['>=1.0.0', '<1.27.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/search_api'
