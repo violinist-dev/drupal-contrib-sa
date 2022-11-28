@@ -11,6 +11,7 @@ php application.php drupal-contrib-sa:download > /dev/null
 php application.php drupal-contrib-sa:complete > /dev/null
 
 # Do not commit deletions.
+git config --global --add safe.directory "$GITHUB_WORKSPACE"
 git diff --no-renames --name-only --diff-filter=D -z | xargs -0 git checkout --
 
 # These have crap version names.
