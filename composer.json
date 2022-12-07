@@ -1,5 +1,6 @@
 {
   "name": "violinist-dev/drupal-contrib-sa",
+  "description": "Drupal contrib SA",
   "type": "library",
   "require-dev": {
     "phpunit/phpunit": "^6.5",
