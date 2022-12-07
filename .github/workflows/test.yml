@@ -38,8 +38,8 @@ jobs:
       - name: Dump composer verson
         run: composer --version
 
-      - name: Validate composer.json
-        run: composer --verbose validate
+  #    - name: Validate composer.json
+   #     run: composer --verbose validate
 
       - name: Install dependencies
         run: composer --verbose install
