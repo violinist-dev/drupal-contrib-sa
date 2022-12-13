@@ -2489,12 +2489,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/security-advisories.git",
-                "reference": "f5240922e13cd9444c6b7733b19022034932c402"
+                "reference": "84ae49f8ce7fa63de9c05776ed242e3565370a44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/security-advisories/zipball/f5240922e13cd9444c6b7733b19022034932c402",
-                "reference": "f5240922e13cd9444c6b7733b19022034932c402",
+                "url": "https://api.github.com/repos/FriendsOfPHP/security-advisories/zipball/84ae49f8ce7fa63de9c05776ed242e3565370a44",
+                "reference": "84ae49f8ce7fa63de9c05776ed242e3565370a44",
                 "shasum": ""
             },
             "require-dev": {
@@ -2502,6 +2502,7 @@
                 "symfony/console": "^4.0",
                 "symfony/yaml": "^4.0"
             },
+            "default-branch": true,
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2514,7 +2515,11 @@
                 }
             ],
             "description": "Database of known security vulnerabilities in various PHP projects and libraries",
-            "time": "2022-11-28T11:45:40+00:00"
+            "support": {
+                "issues": "https://github.com/FriendsOfPHP/security-advisories/issues",
+                "source": "https://github.com/FriendsOfPHP/security-advisories/tree/master"
+            },
+            "time": "2022-12-13T15:32:10+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -2708,5 +2713,5 @@
         "ext-json": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
