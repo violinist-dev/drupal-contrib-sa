@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2022-064'
+title: 'H5P - Create and Share Rich Content and Applications - Moderately critical - Remote Code Execution - SA-CONTRIB-2022-064'
+branches:
+    1.51.x: { time: '2022-12-14 12:00:00', versions: ['>=1.0.0', '<1.51.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/h5p'
