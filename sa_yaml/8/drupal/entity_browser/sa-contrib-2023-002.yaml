@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-002'
+title: 'Entity Browser - Moderately critical - Information Disclosure - SA-CONTRIB-2023-002'
+branches:
+    2.9.x: { time: '2023-01-18 12:00:00', versions: ['>=2.0.0', '<2.9.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/entity_browser'

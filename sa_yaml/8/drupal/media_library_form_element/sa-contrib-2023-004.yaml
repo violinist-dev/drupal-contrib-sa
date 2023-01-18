@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-004'
+title: 'Media Library Form API Element - Moderately critical - Information Disclosure - SA-CONTRIB-2023-004'
+branches:
+    2.0.x: { time: '2023-01-18 12:00:00', versions: ['>=2.0.0', '<2.0.6'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/media_library_form_element'
