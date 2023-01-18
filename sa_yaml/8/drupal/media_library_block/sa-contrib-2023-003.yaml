@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-003'
+title: 'Media Library Block - Moderately critical - Information Disclosure - SA-CONTRIB-2023-003'
+branches:
+    1.0.x: { time: '2023-01-18 12:00:00', versions: ['>=1.0.0', '<1.0.4'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/media_library_block'
