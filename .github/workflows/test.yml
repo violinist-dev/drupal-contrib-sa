@@ -11,8 +11,6 @@ jobs:
       fail-fast: false
       matrix:
         php-version:
-          - "7.2"
-          - "7.3"
           - "7.4"
           - "8.0"
           - "8.1"
@@ -50,5 +48,6 @@ jobs:
             sed -i "s/__DIR__.'/__DIR__.'\/..\/../g" sa_yaml/8/validator.php
             cp vendor/sensiolabs/security-advisories/validator.php sa_yaml/7/
             sed -i "s/__DIR__.'/__DIR__.'\/..\/../g" sa_yaml/7/validator.php
+            patch -p1 < patches/validators-what-provides.patch
             php sa_yaml/8/validator.php
             php sa_yaml/7/validator.php

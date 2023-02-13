@@ -1,0 +1,72 @@
+diff --git a/sa_yaml/7/validator.php b/sa_yaml/7/validator.php
+index d710b8d..ad8168e 100644
+--- a/sa_yaml/7/validator.php
++++ b/sa_yaml/7/validator.php
+@@ -9,9 +9,11 @@ if (!is_file($autoloader = __DIR__.'/../../vendor/autoload.php')) {
+ require $autoloader;
+ 
+ use Composer\Config;
++use Composer\DependencyResolver\DefaultPolicy;
+ use Composer\IO\NullIO;
+ use Composer\Repository\ComposerRepository;
+ use Composer\Repository\RepositoryInterface;
++use Composer\Repository\RepositorySet;
+ use Composer\Util\HttpDownloader;
+ use Symfony\Component\Console\Application;
+ use Symfony\Component\Console\Command\Command;
+@@ -131,13 +133,12 @@ final class Validate extends Command
+                         if (!empty($data['composer-repository'])) {
+                             $composerRepository = $this->getComposerRepository($data['composer-repository']);
+ 
+-                            $found = false;
+-                            foreach ($composerRepository->search($composerPackage, RepositoryInterface::SEARCH_NAME) as $package) {
+-                                if ($package['name'] === $composerPackage) {
+-                                    $found = true;
+-                                    break;
+-                                }
+-                            }
++                            $repositorySet = new RepositorySet('dev');
++                            $repositorySet->allowInstalledRepositories();
++                            $repositorySet->addRepository($composerRepository);
++                            $pool = $repositorySet->createPoolForPackage($composerPackage);
++                            $matches = $pool->whatProvides($composerPackage, null);
++                            $found = !empty($matches);
+                             if (!$found) {
+                                 $messages[$path][] = sprintf('Invalid composer package (not found in repository %s)', $data['composer-repository']);
+                             }
+diff --git a/sa_yaml/8/validator.php b/sa_yaml/8/validator.php
+index d710b8d..ad8168e 100644
+--- a/sa_yaml/8/validator.php
++++ b/sa_yaml/8/validator.php
+@@ -9,9 +9,11 @@ if (!is_file($autoloader = __DIR__.'/../../vendor/autoload.php')) {
+ require $autoloader;
+ 
+ use Composer\Config;
++use Composer\DependencyResolver\DefaultPolicy;
+ use Composer\IO\NullIO;
+ use Composer\Repository\ComposerRepository;
+ use Composer\Repository\RepositoryInterface;
++use Composer\Repository\RepositorySet;
+ use Composer\Util\HttpDownloader;
+ use Symfony\Component\Console\Application;
+ use Symfony\Component\Console\Command\Command;
+@@ -131,13 +133,12 @@ final class Validate extends Command
+                         if (!empty($data['composer-repository'])) {
+                             $composerRepository = $this->getComposerRepository($data['composer-repository']);
+ 
+-                            $found = false;
+-                            foreach ($composerRepository->search($composerPackage, RepositoryInterface::SEARCH_NAME) as $package) {
+-                                if ($package['name'] === $composerPackage) {
+-                                    $found = true;
+-                                    break;
+-                                }
+-                            }
++                            $repositorySet = new RepositorySet('dev');
++                            $repositorySet->allowInstalledRepositories();
++                            $repositorySet->addRepository($composerRepository);
++                            $pool = $repositorySet->createPoolForPackage($composerPackage);
++                            $matches = $pool->whatProvides($composerPackage, null);
++                            $found = !empty($matches);
+                             if (!$found) {
+                                 $messages[$path][] = sprintf('Invalid composer package (not found in repository %s)', $data['composer-repository']);
+                             }
