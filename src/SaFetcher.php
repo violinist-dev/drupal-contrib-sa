@@ -54,7 +54,7 @@ class SaFetcher extends HtmlDownloaderBase
                 if ($url === 'https://www.drupal.org/sa-contrib-2018-067') {
                     $name = 'workbench_moderation';
                 }
-                if ($name === 'social' || $name === 'dvg') {
+                if ($name == 'thunder' || $name === 'social' || $name === 'dvg') {
                     throw new IgnoredProjectException();
                 }
             } catch (NoLinksException|IgnoredProjectException $e) {
