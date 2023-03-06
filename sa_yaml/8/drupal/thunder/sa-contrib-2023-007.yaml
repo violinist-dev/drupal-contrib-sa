@@ -1,7 +1,0 @@
-link: 'https://www.drupal.org/sa-contrib-2023-007'
-title: 'Thunder - Moderately critical - Access bypass - SA-CONTRIB-2023-007'
-branches:
-    6.4.x: { time: '2023-03-01 12:00:00', versions: ['>=6.0.0', '<6.4.6'] }
-    6.5.x: { time: '2023-03-01 12:00:00', versions: ['>=6.0.0', '<6.5.3'] }
-composer-repository: 'https://packages.drupal.org/8'
-reference: 'composer://drupal/thunder'
