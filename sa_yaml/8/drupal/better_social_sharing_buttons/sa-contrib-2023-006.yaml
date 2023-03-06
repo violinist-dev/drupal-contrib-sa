@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-006'
+title: 'Better Social Sharing Buttons - Less critical - Cross Site Scripting - SA-CONTRIB-2023-006'
+branches:
+    4.0.x: { time: '2023-03-01 12:00:00', versions: ['>=4.0.0', '<4.0.3'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/better_social_sharing_buttons'
