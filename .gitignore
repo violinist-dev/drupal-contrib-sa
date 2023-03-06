@@ -2,3 +2,6 @@ composer.phar
 /vendor/
 .idea
 /sa_yaml/undefined
+
+# Not interested
+sa_yaml/8/drupal/thunder/sa-contrib-2023-007.yaml
