@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-009'
+title: 'Gutenberg - Less critical - Denial of Service - SA-CONTRIB-2023-009'
+branches:
+    2.7.x: { time: '2023-03-08 12:00:00', versions: ['>=2.0.0', '<2.7.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/gutenberg'
