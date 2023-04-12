@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-013'
+title: 'Protected Pages - Critical - Access bypass - SA-CONTRIB-2023-013'
+branches:
+    1.6.x: { time: '2023-04-12 12:00:00', versions: ['>=1.0.0', '<1.6.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/protected_pages'
