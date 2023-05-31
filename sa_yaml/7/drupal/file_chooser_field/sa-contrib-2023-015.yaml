@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-015'
+title: 'File Chooser Field - Moderately critical - Server Side Request Forgery, Information Disclosure - SA-CONTRIB-2023-015'
+branches:
+    1.13.x: { time: '2023-05-17 12:00:00', versions: ['>=1.0.0', '<1.13.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/file_chooser_field'
