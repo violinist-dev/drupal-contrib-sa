@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-017'
+title: 'Consent Popup - Moderately critical - Cross Site Scripting - SA-CONTRIB-2023-017'
+branches:
+    1.0.x: { time: '2023-05-31 12:00:00', versions: ['>=1.0.0', '<1.0.3'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/consent_popup'

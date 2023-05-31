@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-016'
+title: 'Iubenda Integration - Moderately critical - Cross Site Scripting - SA-CONTRIB-2023-016'
+branches:
+    4.0.x: { time: '2023-05-31 12:00:00', versions: ['>=4.0.0', '<4.0.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/iubenda_integration'
