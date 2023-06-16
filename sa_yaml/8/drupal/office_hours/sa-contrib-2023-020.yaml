@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-020'
+title: 'Office Hours - Moderately critical - Cross Site Scripting - SA-CONTRIB-2023-020'
+branches:
+    1.11.x: { time: '2023-06-14 12:00:00', versions: ['>=1.0.0', '<1.11.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/office_hours'
