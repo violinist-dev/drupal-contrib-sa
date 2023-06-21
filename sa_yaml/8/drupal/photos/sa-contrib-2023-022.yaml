@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2023-022'
+title: 'Album Photos - Critical - Access bypass - SA-CONTRIB-2023-022'
+branches:
+    6.0.x: { time: '2023-06-21 12:00:00', versions: ['>=6.0.0', '<6.0.4'] }
+    4.5.x: { time: '2023-06-21 12:00:00', versions: ['>=4.0.0', '<4.5.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/photos'
