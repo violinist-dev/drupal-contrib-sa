@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-025'
+title: 'Mailchimp - Critical - Cross Site Request Forgery - SA-CONTRIB-2023-025'
+branches:
+    2.2.x: { time: '2023-06-28 12:00:00', versions: ['>=2.0.0', '<2.2.2'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/mailchimp'

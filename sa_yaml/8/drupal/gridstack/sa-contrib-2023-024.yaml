@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-024'
+title: 'GridStack - Less critical - Cross Site Scripting - SA-CONTRIB-2023-024'
+branches:
+    2.11.x: { time: '2023-06-28 12:00:00', versions: ['>=2.0.0', '<2.11.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/gridstack'

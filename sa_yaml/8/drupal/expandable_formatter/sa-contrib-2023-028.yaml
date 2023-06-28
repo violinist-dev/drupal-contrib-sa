@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-028'
+title: 'Expandable Formatter - Moderately critical - Cross Site Scripting - SA-CONTRIB-2023-028'
+branches:
+    1.4.x: { time: '2023-06-28 12:00:00', versions: ['>=1.0.0', '<1.4.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/expandable_formatter'
