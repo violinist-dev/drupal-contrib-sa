@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-032'
+title: 'Minify Source HTML - Moderately critical - Cross site scripting - SA-CONTRIB-2023-032'
+branches:
+    1.11.x: { time: '2023-07-26 12:00:00', versions: ['>=1.0.0', '<1.11.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/minifyhtml'

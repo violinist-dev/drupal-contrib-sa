@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2023-031'
+title: 'Drupal Symfony Mailer - Moderately critical - Cross site request forgery - SA-CONTRIB-2023-031'
+branches:
+    1.2.x: { time: '2023-07-26 12:00:00', versions: ['>=1.0.0', '<1.2.2'] }
+    1.3.x: { time: '2023-07-26 12:00:00', versions: ['>=1.0.0', '<1.3.0-rc3'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/symfony_mailer'
