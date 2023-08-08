@@ -2828,12 +2828,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/security-advisories.git",
-                "reference": "4469efd9a2800b82c6adbf0a233e66b9a25846fb"
+                "reference": "217dec3ba0e354c975c5c4340a4edeeeab5675dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/security-advisories/zipball/4469efd9a2800b82c6adbf0a233e66b9a25846fb",
-                "reference": "4469efd9a2800b82c6adbf0a233e66b9a25846fb",
+                "url": "https://api.github.com/repos/FriendsOfPHP/security-advisories/zipball/217dec3ba0e354c975c5c4340a4edeeeab5675dc",
+                "reference": "217dec3ba0e354c975c5c4340a4edeeeab5675dc",
                 "shasum": ""
             },
             "require-dev": {
@@ -2859,7 +2859,7 @@
                 "issues": "https://github.com/FriendsOfPHP/security-advisories/issues",
                 "source": "https://github.com/FriendsOfPHP/security-advisories/tree/master"
             },
-            "time": "2023-06-16T19:17:30+00:00"
+            "time": "2023-08-08T10:01:20+00:00"
         },
         {
             "name": "symfony/filesystem",
