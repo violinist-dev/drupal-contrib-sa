@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-038'
+title: 'Shorthand - Critical - Access bypass - SA-CONTRIB-2023-038'
+branches:
+    4.0.x: { time: '2023-08-23 12:00:00', versions: ['>=4.0.0', '<4.0.3'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/shorthand'
