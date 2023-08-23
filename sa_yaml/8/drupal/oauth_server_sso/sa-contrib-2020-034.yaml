@@ -1,5 +1,5 @@
 link: 'https://www.drupal.org/sa-contrib-2020-034'
-title: 'Drupal OAuth Server ( OAuth Provider) - Single Sign On ( SSO ) - Moderately critical - SQL Injection - SA-CONTRIB-2020-034'
+title: 'Drupal OAuth Server ( OAuth / OIDC Provider) - Single Sign On ( SSO ) - Moderately critical - SQL Injection - SA-CONTRIB-2020-034'
 branches:
     1.1.x: { time: '2020-10-14 12:00:00', versions: ['>=1.0.0', '<1.1.0'] }
 composer-repository: 'https://packages.drupal.org/8'
