@@ -1,5 +1,5 @@
 link: 'https://www.drupal.org/sa-contrib-2020-020'
-title: 'Drupal Commerce - Moderately critical - Access bypass - SA-CONTRIB-2020-020'
+title: 'Commerce Core - Moderately critical - Access bypass - SA-CONTRIB-2020-020'
 branches:
     2.18.x: { time: '2020-05-27 12:00:00', versions: ['>=2.0.0', '<2.18.0'] }
 composer-repository: 'https://packages.drupal.org/8'

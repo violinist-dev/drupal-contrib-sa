@@ -1,5 +1,5 @@
 link: 'https://www.drupal.org/sa-contrib-2019-073'
-title: 'Maxlength - Moderately critical - Cross Site Scripting - SA-CONTRIB-2019-073'
+title: 'MaxLength - Moderately critical - Cross Site Scripting - SA-CONTRIB-2019-073'
 branches:
     3.3.x: { time: '2019-10-09 12:00:00', versions: ['>=3.0.0', '<3.3.0'] }
 composer-repository: 'https://packages.drupal.org/7'
