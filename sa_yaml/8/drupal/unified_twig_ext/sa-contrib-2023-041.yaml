@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-041'
+title: 'Unified Twig Extensions - Moderately critical - Cross Site Scripting - SA-CONTRIB-2023-041'
+branches:
+    1.1.x: { time: '2023-08-30 12:00:00', versions: ['>=1.0.0', '<1.1.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/unified_twig_ext'
