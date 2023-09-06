@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-044'
+title: 'WebProfiler - Moderately critical - Cross Site Scripting - SA-CONTRIB-2023-044'
+branches:
+    10.1.x: { time: '2023-09-06 12:00:00', versions: ['>=10.0.0', '<10.1.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/webprofiler'
