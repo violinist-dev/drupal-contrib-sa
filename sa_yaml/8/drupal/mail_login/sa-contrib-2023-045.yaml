@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-045'
+title: 'Mail Login - Critical - Access bypass - SA-CONTRIB-2023-045'
+branches:
+    2.8.x: { time: '2023-09-13 12:00:00', versions: ['>=2.0.0', '<2.8.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/mail_login'
