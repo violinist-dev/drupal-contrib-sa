@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-047'
+title: 'Content Moderation Notifications - Moderately critical - Information disclosure - SA-CONTRIB-2023-047'
+branches:
+    3.6.x: { time: '2023-09-27 12:00:00', versions: ['>=3.0.0', '<3.6.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/content_moderation_notifications'
