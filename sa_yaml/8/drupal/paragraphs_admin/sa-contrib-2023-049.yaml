@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-049'
+title: 'Paragraphs admin - Moderately critical -  - SA-CONTRIB-2023-049'
+branches:
+    1.5.x: { time: '2023-11-01 12:00:00', versions: ['>=1.0.0', '<1.5.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/paragraphs_admin'
