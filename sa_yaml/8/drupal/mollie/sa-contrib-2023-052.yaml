@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-052'
+title: 'Mollie for Drupal - Moderately critical - Faulty payment confirmation logic - SA-CONTRIB-2023-052'
+branches:
+    2.2.x: { time: '2023-11-15 12:00:00', versions: ['>=2.0.0', '<2.2.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/mollie'
