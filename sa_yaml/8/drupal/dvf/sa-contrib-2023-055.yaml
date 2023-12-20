@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2023-055'
+title: 'Data Visualisation Framework - Moderately critical - Cross Site Scripting - SA-CONTRIB-2023-055'
+branches:
+    2.0.x: { time: '2023-12-20 12:00:00', versions: ['>=2.0.0', '<2.0.2'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/dvf'
