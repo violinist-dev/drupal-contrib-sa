@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-001'
+title: 'File Entity (fieldable files) - Moderately critical - Cross Site Scripting, Access bypass - SA-CONTRIB-2024-001'
+branches:
+    2.38.x: { time: '2024-01-10 12:00:00', versions: ['>=2.0.0', '<2.38.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/file_entity'

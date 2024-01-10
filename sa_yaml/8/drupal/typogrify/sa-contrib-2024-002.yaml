@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-002'
+title: 'Typogrify - Moderately critical - Cross Site Scripting - SA-CONTRIB-2024-002'
+branches:
+    1.3.x: { time: '2024-01-10 12:00:00', versions: ['>=1.0.0', '<1.3.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/typogrify'
