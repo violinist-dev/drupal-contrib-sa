@@ -3,9 +3,7 @@
 namespace Violinist\DrupalContribSA;
 
 use GuzzleHttp\Client;
-use Psr\Cache\CacheItemInterface;
-use Psr\Http\Message\ResponseInterface;
-use Symfony\Component\Cache\Simple\FilesystemCache;
+use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 use Symfony\Component\DomCrawler\Crawler;
 
 abstract class HtmlDownloaderBase
@@ -15,7 +13,9 @@ abstract class HtmlDownloaderBase
      */
     protected $client;
 
-    public function __construct(Client $client, FilesystemCache $cache)
+    protected FilesystemAdapter $cache;
+
+    public function __construct(Client $client, FilesystemAdapter $cache)
     {
         $this->client = $client;
         $this->cache = $cache;
@@ -30,8 +30,10 @@ abstract class HtmlDownloaderBase
     public function download($url, $params = [])
     {
         $cid = md5(json_encode([$url, $params]));
-        if ($data = $this->cache->get($cid)) {
-            return $data;
+        /** @var \Psr\Cache\CacheItemInterface $data */
+        $data = $this->cache->getItem($cid);
+        if ($data->isHit()) {
+            return $data->get();
         }
         $params['headers'] = [
             'headers' => [
@@ -40,7 +42,8 @@ abstract class HtmlDownloaderBase
         ];
         $response = $this->client->get($url, $params);
         $response_body = (string) $response->getBody();
-        $this->cache->set($cid, $response_body);
+        $data->set($response_body);
+        $this->cache->save($data);
         return $response_body;
     }
 }

@@ -3,7 +3,7 @@
 namespace Violinist\DrupalContribSA;
 
 use GuzzleHttp\Client;
-use Symfony\Component\Cache\Simple\FilesystemCache;
+use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 use Symfony\Component\DomCrawler\Crawler;
 use vierbergenlars\SemVer\version;
 use Violinist\DrupalContribSA\Exception\NoLinksException;
@@ -21,9 +21,9 @@ class ContribSaParser
     private $httpClient;
 
     /**
-     * @var FilesystemCache
+     * @var \Symfony\Component\Cache\Adapter\FilesystemAdapter
      */
-    private $cache;
+    private FilesystemAdapter $cache;
 
     private $versions = [];
 
@@ -34,7 +34,7 @@ class ContribSaParser
         $this->crawler = $crawler;
     }
 
-    public function setCache(FilesystemCache $cache)
+    public function setCache(FilesystemAdapter $cache)
     {
         $this->cache = $cache;
     }
@@ -288,12 +288,14 @@ class ContribSaParser
     protected function getData($url)
     {
         $cid = md5(json_encode([$url]));
-        if ($data = $this->cache->get($cid)) {
-            return $data;
+        $data = $this->cache->getItem($cid);
+        if ($data->isHit()) {
+            return $data->get();
         }
         $response = $this->httpClient->get($url);
         $response_body = (string) $response->getBody();
-        $this->cache->set($cid, $response_body);
+        $data->set($response_body);
+        $this->cache->save($data);
         return $response_body;
     }
 

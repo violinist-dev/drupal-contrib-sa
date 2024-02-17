@@ -22,7 +22,7 @@ class CompleterCommand extends Command
         parent::__construct();
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output) : int
     {
         while ($this->completer->hasMore()) {
             $filename = null;
@@ -47,5 +47,6 @@ class CompleterCommand extends Command
                 }
             }
         }
+        return 0;
     }
 }
