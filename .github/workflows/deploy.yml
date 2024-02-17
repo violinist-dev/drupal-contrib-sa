@@ -1,5 +1,7 @@
 name: Build SAs every night
 on:
+  # manually
+  workflow_dispatch:
   # also on webhooks
   repository_dispatch:
   push:
