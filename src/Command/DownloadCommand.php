@@ -23,7 +23,7 @@ class DownloadCommand extends Command
         parent::__construct();
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output) : int
     {
         $output->writeln('Starting download...');
         while ($this->downloader->hasMore()) {
@@ -36,6 +36,6 @@ class DownloadCommand extends Command
                 $this->dumper->dumpPackageData($package, $link, $filename);
             }
         }
-
+        return 0;
     }
 }
