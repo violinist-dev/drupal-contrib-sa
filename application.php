@@ -1,5 +1,6 @@
 <?php
 
+use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 use GuzzleHttp\Client;
 use Symfony\Component\Cache\Simple\FilesystemCache;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -17,7 +18,7 @@ $container_builder->register('http_client', Client::class);
 $container_builder->register('html_downloader', HtmlDownloader::class)
     ->addArgument(new Reference('http_client'))
     ->addArgument(new Reference('cache'));
-$container_builder->register('cache', FilesystemCache::class);
+$container_builder->register('cache', FilesystemAdapter::class);
 $container_builder->register('dumper', \Violinist\DrupalContribSA\YamlDumper::class);
 $container_builder->register('completer', \Violinist\DrupalContribSA\PackageCompleter::class)
     ->addArgument('%sa_yaml_dir%')

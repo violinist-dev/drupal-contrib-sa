@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   # also on webhooks
   repository_dispatch:
+  pull_request:
   push:
     branches:
       - master
@@ -26,12 +27,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
       - name: yaml permissions
+        if: github.ref == 'refs/heads/master'
         run: |
           git config core.fileMode false
           sudo chmod -R 777 sa_yaml
           git status
           git add sa_yaml
       - name: Create Pull Request
+        if: github.ref == 'refs/heads/master'
         with:
           body: This here PR, although it looks like it's made by me, is totally made by computers in the cloud ☁️
           token: ${{ secrets.PAT }}
