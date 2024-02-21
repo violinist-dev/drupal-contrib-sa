@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-010'
+title: 'Node Access Rebuild Progressive - Less critical - Access bypass - SA-CONTRIB-2024-010'
+branches:
+    2.0.x: { time: '2024-02-21 12:00:00', versions: ['>=2.0.0', '<2.0.2'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/node_access_rebuild_progressive'
