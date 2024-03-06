@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-015'
+title: 'Registration role - Critical - Access bypass - SA-CONTRIB-2024-015'
+branches:
+    2.0.x: { time: '2024-03-06 12:00:00', versions: ['>=2.0.0', '<2.0.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/registration_role'
