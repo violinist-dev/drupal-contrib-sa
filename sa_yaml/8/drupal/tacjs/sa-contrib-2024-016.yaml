@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-016'
+title: 'TacJS - Moderately critical - Cross Site Scripting - SA-CONTRIB-2024-016'
+branches:
+    6.5.x: { time: '2024-03-27 12:00:00', versions: ['>=6.0.0', '<6.5.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/tacjs'
