@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-019'
+title: 'RESTful Web Services - Critical - Access bypass - SA-CONTRIB-2024-019'
+branches:
+    2.10.x: { time: '2024-05-15 12:00:00', versions: ['>=2.0.0', '<2.10.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/restws'

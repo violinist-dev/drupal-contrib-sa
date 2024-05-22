@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-021'
+title: 'Commerce View Receipt - Moderately critical - Access bypass - SA-CONTRIB-2024-021'
+branches:
+    1.0.x: { time: '2024-05-22 12:00:00', versions: ['>=1.0.0', '<1.0.3'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/commerce_view_receipt'

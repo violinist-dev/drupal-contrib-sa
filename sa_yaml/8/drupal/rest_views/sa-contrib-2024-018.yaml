@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-018'
+title: 'REST Views - Moderately critical - Information Disclosure - SA-CONTRIB-2024-018'
+branches:
+    3.0.x: { time: '2024-04-24 12:00:00', versions: ['>=3.0.0', '<3.0.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/rest_views'
