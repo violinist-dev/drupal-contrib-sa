@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-017'
+title: 'Advanced PWA - Critical - Access bypass - SA-CONTRIB-2024-017'
+branches:
+    1.5.x: { time: '2024-04-24 12:00:00', versions: ['>=1.0.0', '<1.5.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/advanced_pwa'
