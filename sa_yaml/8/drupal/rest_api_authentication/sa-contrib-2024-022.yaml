@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-022'
+title: 'Drupal REST & JSON API Authentication - Moderately critical - Access bypass - SA-CONTRIB-2024-022'
+branches:
+    2.0.x: { time: '2024-05-29 12:00:00', versions: ['>=2.0.0', '<2.0.13'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/rest_api_authentication'

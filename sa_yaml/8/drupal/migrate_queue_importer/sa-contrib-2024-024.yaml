@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-024'
+title: 'Migrate queue importer - Moderately critical - Cross Site Request Forgery - SA-CONTRIB-2024-024'
+branches:
+    2.1.x: { time: '2024-05-29 12:00:00', versions: ['>=2.0.0', '<2.1.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/migrate_queue_importer'
