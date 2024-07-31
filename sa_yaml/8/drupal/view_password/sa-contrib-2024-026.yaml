@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-026'
+title: 'View Password - Moderately critical - Cross Site Scripting - SA-CONTRIB-2024-026'
+branches:
+    6.0.x: { time: '2024-07-31 12:00:00', versions: ['>=6.0.0', '<6.0.4'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/view_password'
