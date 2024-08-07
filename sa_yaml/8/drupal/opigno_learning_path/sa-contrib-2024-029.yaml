@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-029'
+title: 'Opigno Learning path - Critical - Arbitrary PHP code execution - SA-CONTRIB-2024-029'
+branches:
+    3.1.x: { time: '2024-08-07 12:00:00', versions: ['>=3.0.0', '<3.1.2'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/opigno_learning_path'
