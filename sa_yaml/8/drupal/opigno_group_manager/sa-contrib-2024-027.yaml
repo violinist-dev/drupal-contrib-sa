@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-027'
+title: 'Opigno group manager - Critical - Arbitrary PHP code execution - SA-CONTRIB-2024-027'
+branches:
+    3.1.x: { time: '2024-08-07 12:00:00', versions: ['>=3.0.0', '<3.1.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/opigno_group_manager'
