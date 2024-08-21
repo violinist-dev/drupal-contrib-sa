@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-030'
+title: 'Responsive and off-canvas menu - Moderately critical - Access bypass - SA-CONTRIB-2024-030'
+branches:
+    4.4.x: { time: '2024-08-21 12:00:00', versions: ['>=4.0.0', '<4.4.4'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/responsive_menu'
