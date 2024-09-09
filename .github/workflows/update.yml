@@ -12,7 +12,7 @@ jobs:
   violinist:
     name: Run update checks and create PRs
     container:
-      image: ghcr.io/violinist-dev/update-check-runner:7.3-multi-composer-2
+      image: ghcr.io/violinist-dev/update-check-runner:8.0-multi-composer-2
       env:
         REPO_TOKEN: ${{ secrets.PAT_UPDATE_JOB }}
         PROJECT_URL: ${{ github.repositoryUrl }}
