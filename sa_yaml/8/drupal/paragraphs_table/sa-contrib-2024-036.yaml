@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2024-036'
+title: 'Paragraphs table - Critical - Access bypass, Information Disclosure - SA-CONTRIB-2024-036'
+branches:
+    1.23.x: { time: '2024-09-04 12:00:00', versions: ['>=1.0.0', '<1.23.0'] }
+    2.0.x: { time: '2024-09-04 12:00:00', versions: ['>=2.0.0', '<2.0.2'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/paragraphs_table'
