@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-040'
+title: 'File Entity (fieldable files) - Moderately critical - Information Disclosure - SA-CONTRIB-2024-040'
+branches:
+    2.39.x: { time: '2024-09-11 12:00:00', versions: ['>=2.0.0', '<2.39.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/file_entity'
