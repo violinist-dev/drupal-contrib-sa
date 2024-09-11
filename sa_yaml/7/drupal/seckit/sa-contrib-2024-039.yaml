@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-039'
+title: 'Security Kit - Less critical - Denial of Service - SA-CONTRIB-2024-039'
+branches:
+    1.13.x: { time: '2024-09-11 12:00:00', versions: ['>=1.0.0', '<1.13.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/seckit'
