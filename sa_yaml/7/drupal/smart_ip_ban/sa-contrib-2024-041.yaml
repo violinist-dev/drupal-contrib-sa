@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-041'
+title: 'Smart IP Ban - Critical - Access bypass - SA-CONTRIB-2024-041'
+branches:
+    1.1.x: { time: '2024-09-18 12:00:00', versions: ['>=1.0.0', '<1.1.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/smart_ip_ban'
