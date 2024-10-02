@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-043'
+title: 'Two-factor Authentication (TFA) - Critical - Access bypass - SA-CONTRIB-2024-043'
+branches:
+    1.8.x: { time: '2024-10-02 12:00:00', versions: ['>=1.0.0', '<1.8.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/tfa'
