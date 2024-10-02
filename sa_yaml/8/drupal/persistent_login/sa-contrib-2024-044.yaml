@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2024-044'
+title: 'Persistent Login - Moderately critical - Access bypass - SA-CONTRIB-2024-044'
+branches:
+    1.8.x: { time: '2024-10-02 12:00:00', versions: ['>=1.0.0', '<1.8.0'] }
+    2.2.x: { time: '2024-10-02 12:00:00', versions: ['>=2.0.0', '<2.2.2'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/persistent_login'
