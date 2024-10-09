@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2024-048'
+title: 'Gutenberg - Moderately critical - Cross Site Request Forgery - SA-CONTRIB-2024-048'
+branches:
+    2.14.x: { time: '2024-10-09 12:00:00', versions: ['>=2.0.0', '<2.14.0'] }
+    3.0.x: { time: '2024-10-09 12:00:00', versions: ['>=3.0.0', '<3.0.5'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/gutenberg'
