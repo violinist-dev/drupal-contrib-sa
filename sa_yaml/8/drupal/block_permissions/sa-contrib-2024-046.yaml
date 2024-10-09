@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2024-046'
+title: 'Block permissions - Moderately critical - Access bypass - SA-CONTRIB-2024-046'
+branches:
+    1.2.x: { time: '2024-10-09 12:00:00', versions: ['>=1.0.0', '<1.2.0'] }
+    1.3.x: { time: '2024-10-09 12:00:00', versions: ['>=1.0.0', '<1.3.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/block_permissions'
