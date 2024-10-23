@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2024-052'
+title: 'Monster Menus - Critical - Arbitrary PHP code execution - SA-CONTRIB-2024-052'
+branches:
+    9.4.x: { time: '2024-10-23 12:00:00', versions: ['>=9.0.0', '<9.4.2'] }
+    9.3.x: { time: '2024-10-23 12:00:00', versions: ['>=9.0.0', '<9.3.4'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/monster_menus'
