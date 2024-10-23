@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2024-053'
+title: 'Smartling Connector - Less critical - Multiple vulnerabilities - SA-CONTRIB-2024-053'
+branches:
+    4.19.x: { time: '2024-10-23 12:00:00', versions: ['>=4.0.0', '<4.19.0'] }
+    3.8.x: { time: '2024-10-23 12:00:00', versions: ['>=3.0.0', '<3.8.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/smartling'
