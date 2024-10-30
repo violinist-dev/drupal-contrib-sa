@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-055'
+title: 'Cookiebot + GTM - Moderately critical - Cross Site Scripting - SA-CONTRIB-2024-055'
+branches:
+    1.0.x: { time: '2024-10-30 12:00:00', versions: ['>=1.0.0', '<1.0.18'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/cookiebot_gtm'
