@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-057'
+title: 'Basic HTTP Authentication - Critical - Access bypass - SA-CONTRIB-2024-057'
+branches:
+    1.4.x: { time: '2024-11-06 12:00:00', versions: ['>=1.0.0', '<1.4.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/basic_auth'
