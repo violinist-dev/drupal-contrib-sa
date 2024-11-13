@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-060'
+title: 'POST File - Critical - Cross Site Scripting, Arbitrary PHP code execution - SA-CONTRIB-2024-060'
+branches:
+    1.0.x: { time: '2024-11-13 12:00:00', versions: ['>=1.0.0', '<1.0.2'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/postfile'
