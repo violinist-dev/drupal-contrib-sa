@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-062'
+title: 'Mailjet - Moderately critical - Arbitrary PHP code execution - SA-CONTRIB-2024-062'
+branches:
+    2.23.x: { time: '2024-11-20 12:00:00', versions: ['>=2.0.0', '<2.23.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/mailjet'

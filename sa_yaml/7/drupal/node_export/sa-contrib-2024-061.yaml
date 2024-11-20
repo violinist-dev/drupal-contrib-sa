@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-061'
+title: 'Node export - Moderately critical - Arbitrary PHP code execution - SA-CONTRIB-2024-061'
+branches:
+    3.3.x: { time: '2024-11-20 12:00:00', versions: ['>=3.0.0', '<3.3.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/node_export'

@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-063'
+title: 'Eloqua - Moderately critical - Arbitrary PHP code execution - SA-CONTRIB-2024-063'
+branches:
+    1.15.x: { time: '2024-11-20 12:00:00', versions: ['>=1.0.0', '<1.15.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/eloqua'
