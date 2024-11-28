@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-064'
+title: 'Tarte au Citron - Moderately critical - Cross Site Scripting - SA-CONTRIB-2024-064'
+branches:
+    2.0.x: { time: '2024-11-27 12:00:00', versions: ['>=2.0.0', '<2.0.5'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/tarte_au_citron'
