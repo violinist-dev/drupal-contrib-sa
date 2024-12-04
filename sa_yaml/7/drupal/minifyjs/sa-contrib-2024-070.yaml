@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-070'
+title: 'Minify JS - Moderately critical - Cross site request forgery - SA-CONTRIB-2024-070'
+branches:
+    1.11.x: { time: '2024-12-04 12:00:00', versions: ['>=1.0.0', '<1.11.0'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/minifyjs'
