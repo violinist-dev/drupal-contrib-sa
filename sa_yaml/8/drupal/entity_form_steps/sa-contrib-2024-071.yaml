@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2024-071'
+title: 'Entity Form Steps - Moderately critical - Cross site scripting - SA-CONTRIB-2024-071'
+branches:
+    1.1.x: { time: '2024-12-04 12:00:00', versions: ['>=1.0.0', '<1.1.4'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/entity_form_steps'
