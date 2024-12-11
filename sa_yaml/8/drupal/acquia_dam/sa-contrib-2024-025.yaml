@@ -1,5 +1,5 @@
 link: 'https://www.drupal.org/sa-contrib-2024-025'
-title: 'Acquia DAM - Moderately critical - Access bypass, Denial of Service - SA-CONTRIB-2024-025'
+title: 'Acquia DAM - Moderately critical - Cross Site Request Forgery, Denial of Service - SA-CONTRIB-2024-025'
 branches:
     1.0.x: { time: '2024-06-05 12:00:00', versions: ['>=1.0.0', '<1.0.13'] }
     1.1.x: { time: '2024-06-05 12:00:00', versions: ['>=1.0.0', '<1.1.0-beta3'] }
