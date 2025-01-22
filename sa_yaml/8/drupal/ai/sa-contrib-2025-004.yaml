@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2025-004'
+title: 'AI (Artificial Intelligence) - Moderately critical - Access bypass, Information Disclosure - SA-CONTRIB-2025-004'
+branches:
+    1.0.x: { time: '2025-01-22 12:00:00', versions: ['>=1.0.0', '<1.0.3'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/ai'
