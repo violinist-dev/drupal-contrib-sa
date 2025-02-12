@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2025-016'
+title: 'SpamSpan filter - Moderately critical - Cross Site Scripting - SA-CONTRIB-2025-016'
+branches:
+    3.2.x: { time: '2025-02-12 12:00:00', versions: ['>=3.0.0', '<3.2.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/spamspan'
