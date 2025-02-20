@@ -1,5 +1,5 @@
 link: 'https://www.drupal.org/sa-contrib-2024-067'
-title: 'OAuth & OpenID Connect Single Sign On – SSO (OAuth/OIDC Client) - Critical - Cross Site Scripting - SA-CONTRIB-2024-067'
+title: 'OAuth Client & OpenID Connect SSO | OAuth/OIDC Login - Critical - Cross Site Scripting - SA-CONTRIB-2024-067'
 branches:
     1.355.x: { time: '2024-12-04 12:00:00', versions: ['>=1.0.0', '<1.355.0'] }
 composer-repository: 'https://packages.drupal.org/7'
