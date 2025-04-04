@@ -19,4 +19,4 @@ git checkout sa_yaml/8/drupal/svg_formatter/sa-contrib-2018-027.yaml
 git checkout sa_yaml/8/drupal/domain_group/sa-contrib-2021-037.yaml
 
 # This one is manually added as a core exclusion special case.
-rm sa_yaml/8/drupal/quickedit/sa-contrib-2022-025.yaml
+rm -f sa_yaml/8/drupal/quickedit/sa-contrib-2022-025.yaml
