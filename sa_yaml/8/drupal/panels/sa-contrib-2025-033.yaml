@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2025-033'
+title: 'Panels - Critical - Access bypass - SA-CONTRIB-2025-033'
+branches:
+    4.9.x: { time: '2025-04-09 12:00:00', versions: ['>=4.0.0', '<4.9.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/panels'
