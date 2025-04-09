@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2025-032'
+title: 'Gif Player Field - Moderately critical - Cross site scripting - SA-CONTRIB-2025-032'
+branches:
+    2.0.x: { time: '2025-04-09 12:00:00', versions: ['>=2.0.0', '<2.0.4'] }
+    1.5.x: { time: '2025-04-09 12:00:00', versions: ['>=1.0.0', '<1.5.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/gifplayer'
