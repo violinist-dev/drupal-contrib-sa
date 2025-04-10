@@ -1,0 +1,8 @@
+link: 'https://www.drupal.org/sa-contrib-2025-031'
+title: 'ECA: Event - Condition - Action - Critical - Cross site request forgery - SA-CONTRIB-2025-031'
+branches:
+    1.1.x: { time: '2025-04-09 12:00:00', versions: ['>=1.0.0', '<1.1.12'] }
+    2.0.x: { time: '2025-04-09 12:00:00', versions: ['>=2.0.0', '<2.0.16'] }
+    2.1.x: { time: '2025-04-09 12:00:00', versions: ['>=2.0.0', '<2.1.7'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/eca'
