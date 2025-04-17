@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2025-034'
+title: 'baguetteBox.js - Moderately critical - Cross Site Scripting - SA-CONTRIB-2025-034'
+branches:
+    3.0.x: { time: '2025-04-16 12:00:00', versions: ['>=3.0.0', '<3.0.1'] }
+    2.0.x: { time: '2025-04-16 12:00:00', versions: ['>=2.0.0', '<2.0.4'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/baguettebox'
