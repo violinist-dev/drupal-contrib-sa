@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2025-043'
+title: 'Block Class - Moderately critical - Cross Site Scripting - SA-CONTRIB-2025-043'
+branches:
+    4.0.x: { time: '2025-04-23 12:00:00', versions: ['>=4.0.0', '<4.0.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/block_class'

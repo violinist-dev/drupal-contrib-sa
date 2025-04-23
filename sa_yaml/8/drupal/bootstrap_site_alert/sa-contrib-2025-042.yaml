@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2025-042'
+title: 'Bootstrap Site Alert - Moderately critical - Cross Site Scripting - SA-CONTRIB-2025-042'
+branches:
+    1.13.x: { time: '2025-04-23 12:00:00', versions: ['>=1.0.0', '<1.13.0'] }
+    3.0.x: { time: '2025-04-23 12:00:00', versions: ['>=3.0.0', '<3.0.4'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/bootstrap_site_alert'
