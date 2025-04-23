@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2025-046'
+title: 'Search API Solr - Moderately critical - Cross Site Request Forgery - SA-CONTRIB-2025-046'
+branches:
+    4.3.x: { time: '2025-04-23 12:00:00', versions: ['>=4.0.0', '<4.3.10'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/search_api_solr'
