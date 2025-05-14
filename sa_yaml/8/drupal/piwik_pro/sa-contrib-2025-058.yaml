@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2025-058'
+title: 'Piwik PRO - Moderately critical - Cross Site Scripting - SA-CONTRIB-2025-058'
+branches:
+    1.3.x: { time: '2025-05-14 12:00:00', versions: ['>=1.0.0', '<1.3.2'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/piwik_pro'
