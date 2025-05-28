@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2025-076'
+title: 'COOKiES Consent Management - Moderately critical - Cross Site Scripting - SA-CONTRIB-2025-076'
+branches:
+    1.2.x: { time: '2025-05-28 12:00:00', versions: ['>=1.0.0', '<1.2.15'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/cookies'

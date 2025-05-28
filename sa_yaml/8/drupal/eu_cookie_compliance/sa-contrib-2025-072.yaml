@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2025-072'
+title: 'EU Cookie Compliance (GDPR Compliance) - Moderately critical - Cross Site Scripting - SA-CONTRIB-2025-072'
+branches:
+    1.26.x: { time: '2025-05-28 12:00:00', versions: ['>=1.0.0', '<1.26.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/eu_cookie_compliance'
