@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2025-082'
+title: 'Enterprise MFA - TFA for Drupal - Critical - Access bypass - SA-CONTRIB-2025-082'
+branches:
+    5.2.x: { time: '2025-06-25 12:00:00', versions: ['>=5.0.0', '<5.2.1'] }
+    4.8.x: { time: '2025-06-25 12:00:00', versions: ['>=4.0.0', '<4.8.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/miniorange_2fa'

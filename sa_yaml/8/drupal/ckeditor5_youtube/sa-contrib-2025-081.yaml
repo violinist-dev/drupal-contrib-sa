@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2025-081'
+title: 'CKEditor5 Youtube - Moderately critical - Cross-site Scripting - SA-CONTRIB-2025-081'
+branches:
+    1.0.x: { time: '2025-06-25 12:00:00', versions: ['>=1.0.0', '<1.0.3'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/ckeditor5_youtube'
