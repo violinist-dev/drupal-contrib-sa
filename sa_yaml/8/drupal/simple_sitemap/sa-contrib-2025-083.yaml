@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2025-083'
+title: 'Simple XML sitemap - Moderately critical - Cross-site Scripting - SA-CONTRIB-2025-083'
+branches:
+    4.2.x: { time: '2025-06-25 12:00:00', versions: ['>=4.0.0', '<4.2.2'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/simple_sitemap'
