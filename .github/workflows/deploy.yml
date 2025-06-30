@@ -24,7 +24,7 @@ jobs:
           echo "{date}={$date}" >> $GITHUB_OUTPUT
       - uses: actions/checkout@v2
       - run: |
-          echo ${{ steps.date.outputs.date }}"
+          echo "${{ steps.date.outputs.date }}"
       - uses: ./deploy/
         env:
           GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
