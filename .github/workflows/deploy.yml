@@ -19,8 +19,12 @@ jobs:
     steps:
       - name: Get current date
         id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+        run: |
+          date=$(date +'%Y-%m-%d')
+          echo "date=$date" >> $GITHUB_OUTPUT
       - uses: actions/checkout@v2
+      - run: |
+          echo "${{ steps.date.outputs.date }}"
       - uses: ./deploy/
         env:
           GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
