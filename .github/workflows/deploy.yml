@@ -21,7 +21,7 @@ jobs:
         id: date
         run: |
           date=$(date +'%Y-%m-%d')
-          echo "{date}={$date}" >> $GITHUB_OUTPUT
+          echo "date=$date" >> $GITHUB_OUTPUT
       - uses: actions/checkout@v2
       - run: |
           echo "${{ steps.date.outputs.date }}"
