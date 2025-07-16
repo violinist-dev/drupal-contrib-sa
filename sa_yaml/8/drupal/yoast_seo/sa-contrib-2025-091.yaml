@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2025-091'
+title: 'Real-time SEO for Drupal - Moderately critical - Cross-site Scripting - SA-CONTRIB-2025-091'
+branches:
+    2.2.x: { time: '2025-07-16 12:00:00', versions: ['>=2.0.0', '<2.2.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/yoast_seo'
