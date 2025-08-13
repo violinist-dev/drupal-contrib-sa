@@ -7,7 +7,7 @@ on:
   pull_request:
   push:
     branches:
-      - master
+      - main
   schedule:
     # * is a special character in YAML so you have to quote this string
     - cron: '30 19 * * *'
@@ -38,7 +38,7 @@ jobs:
           git status
           git add sa_yaml
       - name: Create Pull Request
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         with:
           body: This here PR, although it looks like it's made by me, is totally made by computers in the cloud ☁️
           token: ${{ secrets.PAT_UPDATE_JOB }}
