@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2025-096'
+title: 'Authenticator Login - Highly critical - Access bypass - SA-CONTRIB-2025-096'
+branches:
+    2.1.x: { time: '2025-08-13 12:00:00', versions: ['>=2.0.0', '<2.1.5'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/alogin'
