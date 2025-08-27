@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2025-099'
+title: 'Facets - Moderately critical - Information Disclosure - SA-CONTRIB-2025-099'
+branches:
+    2.0.x: { time: '2025-08-27 12:00:00', versions: ['>=2.0.0', '<2.0.10'] }
+    3.0.x: { time: '2025-08-27 12:00:00', versions: ['>=3.0.0', '<3.0.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/facets'

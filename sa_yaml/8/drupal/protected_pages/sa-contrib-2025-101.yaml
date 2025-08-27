@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2025-101'
+title: 'Protected Pages - Moderately critical - Access bypass - SA-CONTRIB-2025-101'
+branches:
+    1.8.x: { time: '2025-08-27 12:00:00', versions: ['>=1.0.0', '<1.8.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/protected_pages'
