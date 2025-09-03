@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2025-105'
+title: 'Acquia DAM - Moderately critical - Access bypass, Information Disclosure - SA-CONTRIB-2025-105'
+branches:
+    1.1.x: { time: '2025-09-03 12:00:00', versions: ['>=1.0.0', '<1.1.5'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/acquia_dam'
