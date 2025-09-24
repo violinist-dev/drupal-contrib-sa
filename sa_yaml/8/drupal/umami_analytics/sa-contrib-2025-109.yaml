@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2025-109'
+title: 'Umami Analytics - Moderately critical - Cross Site Scripting - SA-CONTRIB-2025-109'
+branches:
+    1.0.x: { time: '2025-09-24 12:00:00', versions: ['>=1.0.0', '<1.0.1'] }
+    2.0.x: { time: '2025-09-24 12:00:00', versions: ['>=2.0.0', '<2.0.0-beta3'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/umami_analytics'
