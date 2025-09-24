@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2025-110'
+title: 'Currency - Moderately critical - Cross Site Request Forgery - SA-CONTRIB-2025-110'
+branches:
+    3.5.x: { time: '2025-09-24 12:00:00', versions: ['>=3.0.0', '<3.5.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/currency'
