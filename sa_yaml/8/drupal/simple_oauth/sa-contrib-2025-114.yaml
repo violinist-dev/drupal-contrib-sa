@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2025-114'
+title: 'Simple OAuth (OAuth2) & OpenID Connect - Critical - Access bypass - SA-CONTRIB-2025-114'
+branches:
+    6.0.x: { time: '2025-10-29 12:00:00', versions: ['>=6.0.0', '<6.0.7'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/simple_oauth'
