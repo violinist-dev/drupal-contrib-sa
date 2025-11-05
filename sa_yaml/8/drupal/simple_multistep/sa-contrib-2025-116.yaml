@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2025-116'
+title: 'Simple multi step form - Moderately critical - Cross-site Scripting - SA-CONTRIB-2025-116'
+branches:
+    2.1.x: { time: '2025-11-05 12:00:00', versions: ['>=2.0.0', '<2.1.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/simple_multistep'
