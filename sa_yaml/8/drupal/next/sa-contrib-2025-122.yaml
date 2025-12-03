@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2025-122'
+title: 'Next.js - Critical - Access bypass - SA-CONTRIB-2025-122'
+branches:
+    2.0.x: { time: '2025-12-03 12:00:00', versions: ['>=2.0.0', '<2.0.1'] }
+    1.6.x: { time: '2025-12-03 12:00:00', versions: ['>=1.0.0', '<1.6.4'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/next'

@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2025-117'
+title: 'Mini site - Moderately critical - Cross-Site Scripting - SA-CONTRIB-2025-117'
+branches:
+    3.0.x: { time: '2025-12-03 12:00:00', versions: ['>=3.0.0', '<3.0.2'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/minisite'
