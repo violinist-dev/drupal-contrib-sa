@@ -1,0 +1,8 @@
+link: 'https://www.drupal.org/sa-contrib-2025-125'
+title: 'Acquia Content Hub - Moderately critical - Cross-Site Request Forgery - SA-CONTRIB-2025-125'
+branches:
+    3.6.x: { time: '2025-12-10 12:00:00', versions: ['>=3.0.0', '<3.6.4'] }
+    3.7.x: { time: '2025-12-10 12:00:00', versions: ['>=3.0.0', '<3.7.3'] }
+    3.8.x: { time: '2025-12-10 12:00:00', versions: ['>=3.0.0', '<3.8.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/acquia_contenthub'
