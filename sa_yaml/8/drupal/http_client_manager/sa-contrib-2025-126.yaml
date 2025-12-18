@@ -1,0 +1,8 @@
+link: 'https://www.drupal.org/sa-contrib-2025-126'
+title: 'HTTP Client Manager - Less critical - Information disclosure - SA-CONTRIB-2025-126'
+branches:
+    9.3.x: { time: '2025-12-17 12:00:00', versions: ['>=9.0.0', '<9.3.13'] }
+    10.0.x: { time: '2025-12-17 12:00:00', versions: ['>=10.0.0', '<10.0.2'] }
+    11.0.x: { time: '2025-12-17 12:00:00', versions: ['>=11.0.0', '<11.0.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/http_client_manager'
