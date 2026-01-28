@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2026-007'
+title: 'Central Authentication System (CAS) Server - Less critical - XML Element Injection - SA-CONTRIB-2026-007'
+branches:
+    2.0.x: { time: '2026-01-28 12:00:00', versions: ['>=2.0.0', '<2.0.3'] }
+    2.1.x: { time: '2026-01-28 12:00:00', versions: ['>=2.0.0', '<2.1.2'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/cas_server'
