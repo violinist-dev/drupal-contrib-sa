@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2026-009'
+title: 'Quick Edit - Moderately critical - Cross-site Scripting - SA-CONTRIB-2026-009'
+branches:
+    2.0.x: { time: '2026-02-11 12:00:00', versions: ['>=2.0.0', '<2.0.1'] }
+    1.0.x: { time: '2026-02-11 12:00:00', versions: ['>=1.0.0', '<1.0.5'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/quickedit'
