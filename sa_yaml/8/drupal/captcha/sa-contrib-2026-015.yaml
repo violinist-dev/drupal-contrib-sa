@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2026-015'
+title: 'CAPTCHA - Moderately critical - Access bypass - SA-CONTRIB-2026-015'
+branches:
+    2.0.x: { time: '2026-02-25 12:00:00', versions: ['>=2.0.0', '<2.0.10'] }
+    1.17.x: { time: '2026-02-25 12:00:00', versions: ['>=1.0.0', '<1.17.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/captcha'

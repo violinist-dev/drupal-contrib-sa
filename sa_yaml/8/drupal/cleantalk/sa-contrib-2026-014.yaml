@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-014'
+title: 'Anti-Spam by CleanTalk - Moderately critical - Cross-site scripting - SA-CONTRIB-2026-014'
+branches:
+    9.7.x: { time: '2026-02-25 12:00:00', versions: ['>=9.0.0', '<9.7.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/cleantalk'
