@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-024'
+title: 'Google Analytics GA4 - Moderately critical - Cross-site Scripting - SA-CONTRIB-2026-024'
+branches:
+    1.1.x: { time: '2026-03-04 12:00:00', versions: ['>=1.0.0', '<1.1.14'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/ga4_google_analytics'
