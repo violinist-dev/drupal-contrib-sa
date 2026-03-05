@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-023'
+title: 'Calculation Fields - Moderately critical - Cross-site Scripting - SA-CONTRIB-2026-023'
+branches:
+    1.0.x: { time: '2026-03-04 12:00:00', versions: ['>=1.0.0', '<1.0.4'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/calculation_fields'
