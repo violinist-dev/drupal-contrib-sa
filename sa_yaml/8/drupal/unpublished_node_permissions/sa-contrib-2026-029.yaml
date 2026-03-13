@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-029'
+title: 'Unpublished Node Permissions - Critical - Access bypass - SA-CONTRIB-2026-029'
+branches:
+    1.7.x: { time: '2026-03-11 12:00:00', versions: ['>=1.0.0', '<1.7.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/unpublished_node_permissions'
