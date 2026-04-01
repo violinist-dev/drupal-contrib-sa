@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-031'
+title: 'SAML SSO - Service Provider  - Critical - Authentication bypass - SA-CONTRIB-2026-031'
+branches:
+    3.1.x: { time: '2026-04-01 12:00:00', versions: ['>=3.0.0', '<3.1.4'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/miniorange_saml'
