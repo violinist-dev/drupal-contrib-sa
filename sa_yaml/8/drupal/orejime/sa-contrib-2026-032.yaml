@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-032'
+title: 'Orejime - Moderately critical - Cross-site scripting - SA-CONTRIB-2026-032'
+branches:
+    2.0.x: { time: '2026-04-08 12:00:00', versions: ['>=2.0.0', '<2.0.16'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/orejime'
