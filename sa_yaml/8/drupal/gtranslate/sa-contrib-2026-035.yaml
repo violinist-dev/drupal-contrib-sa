@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-035'
+title: 'Translate Drupal with GTranslate - Less critical - DOM clobbering / link manipulation - SA-CONTRIB-2026-035'
+branches:
+    3.0.x: { time: '2026-05-13 12:00:00', versions: ['>=3.0.0', '<3.0.5'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/gtranslate'
