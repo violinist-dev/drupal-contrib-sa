@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-040'
+title: 'TacJS - Moderately critical - Improper Access Control - SA-CONTRIB-2026-040'
+branches:
+    6.8.x: { time: '2026-06-03 12:00:00', versions: ['>=6.0.0', '<6.8.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/tacjs'
