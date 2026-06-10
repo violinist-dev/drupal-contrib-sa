@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-044'
+title: 'Examples for Developers - Moderately critical - Access bypass - SA-CONTRIB-2026-044'
+branches:
+    4.0.x: { time: '2026-06-10 12:00:00', versions: ['>=4.0.0', '<4.0.6'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/examples'
