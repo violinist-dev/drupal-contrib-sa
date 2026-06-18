@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-048'
+title: 'Formatter Field - Critical - PHP object injection - SA-CONTRIB-2026-048'
+branches:
+    2.0.x: { time: '2026-06-17 12:00:00', versions: ['>=2.0.0', '<2.0.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/formatter_field'
