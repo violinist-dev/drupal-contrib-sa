@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-062'
+title: 'Geolocation Field - Critical - SQL Injection - SA-CONTRIB-2026-062'
+branches:
+    3.15.x: { time: '2026-06-24 12:00:00', versions: ['>=3.0.0', '<3.15.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/geolocation'
