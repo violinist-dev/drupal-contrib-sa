@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-059'
+title: 'WissKI - Critical - Access bypass - SA-CONTRIB-2026-059'
+branches:
+    4.2.x: { time: '2026-06-24 12:00:00', versions: ['>=4.0.0', '<4.2.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/wisski'

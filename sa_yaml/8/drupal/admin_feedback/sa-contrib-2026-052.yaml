@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-052'
+title: 'Advanced Content Feedback (aka admin_feedback) - Moderately critical - Access bypass / Insecure Direct Object Reference (IDOR) - SA-CONTRIB-2026-052'
+branches:
+    2.8.x: { time: '2026-06-24 12:00:00', versions: ['>=2.0.0', '<2.8.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/admin_feedback'
