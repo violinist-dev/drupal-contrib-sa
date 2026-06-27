@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-064'
+title: 'Tealium iQ Tag Management - Critical - PHP object injection - SA-CONTRIB-2026-064'
+branches:
+    2.4.x: { time: '2026-06-26 12:00:00', versions: ['>=2.0.0', '<2.4.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/tealiumiq'
