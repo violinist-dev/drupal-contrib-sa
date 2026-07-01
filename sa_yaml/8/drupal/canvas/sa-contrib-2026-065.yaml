@@ -1,0 +1,9 @@
+link: 'https://www.drupal.org/sa-contrib-2026-065'
+title: 'Drupal Canvas - Moderately critical - Improper validation - SA-CONTRIB-2026-065'
+branches:
+    1.4.x: { time: '2026-07-01 12:00:00', versions: ['>=1.0.0', '<1.4.2'] }
+    1.5.x: { time: '2026-07-01 12:00:00', versions: ['>=1.0.0', '<1.5.2'] }
+    1.6.x: { time: '2026-07-01 12:00:00', versions: ['>=1.0.0', '<1.6.1'] }
+    1.7.x: { time: '2026-07-01 12:00:00', versions: ['>=1.0.0', '<1.7.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/canvas'
