@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-073'
+title: 'Siteimprove Analytics - Moderately critical - Cross-site Scripting - SA-CONTRIB-2026-073'
+branches:
+    2.0.x: { time: '2026-07-08 12:00:00', versions: ['>=2.0.0', '<2.0.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/siteimprove_analytics'
