@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-082'
+title: 'Search API Autocomplete - Moderately critical - Cross-site Scripting - SA-CONTRIB-2026-082'
+branches:
+    1.12.x: { time: '2026-07-22 12:00:00', versions: ['>=1.0.0', '<1.12.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/search_api_autocomplete'
