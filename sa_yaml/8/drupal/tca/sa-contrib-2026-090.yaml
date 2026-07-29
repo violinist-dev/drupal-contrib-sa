@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-090'
+title: 'Token Content Access - Moderately critical - Access bypass - SA-CONTRIB-2026-090'
+branches:
+    3.1.x: { time: '2026-07-29 12:00:00', versions: ['>=3.0.0', '<3.1.2'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/tca'
