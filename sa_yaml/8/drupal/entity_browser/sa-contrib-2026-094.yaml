@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-094'
+title: 'Entity Browser - Moderately critical - Cross site scripting - SA-CONTRIB-2026-094'
+branches:
+    2.16.x: { time: '2026-08-05 12:00:00', versions: ['>=2.0.0', '<2.16.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/entity_browser'
