@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-098'
+title: 'External Authentication - Moderately critical - Access bypass - SA-CONTRIB-2026-098'
+branches:
+    2.0.x: { time: '2026-08-12 12:00:00', versions: ['>=2.0.0', '<2.0.13'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/externalauth'
