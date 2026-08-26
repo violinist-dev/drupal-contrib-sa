@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-107'
+title: 'Content Moderation Notifications - Moderately critical - Access bypass - SA-CONTRIB-2026-107'
+branches:
+    3.9.x: { time: '2026-08-26 12:00:00', versions: ['>=3.0.0', '<3.9.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/content_moderation_notifications'

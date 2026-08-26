@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-103'
+title: 'Address Suggestion - Moderately critical - Cross-site scripting - SA-CONTRIB-2026-103'
+branches:
+    1.0.x: { time: '2026-08-26 12:00:00', versions: ['>=1.0.0', '<1.0.25'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/address_suggestion'

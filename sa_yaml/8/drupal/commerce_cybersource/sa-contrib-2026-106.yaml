@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-106'
+title: 'Commerce CyberSource - Moderately critical - Insufficient input validation - SA-CONTRIB-2026-106'
+branches:
+    1.10.x: { time: '2026-08-26 12:00:00', versions: ['>=1.0.0', '<1.10.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/commerce_cybersource'

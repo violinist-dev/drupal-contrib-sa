@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-109'
+title: 'Digital Signage Framework - Moderately critical - Access bypass - SA-CONTRIB-2026-109'
+branches:
+    2.6.x: { time: '2026-08-26 12:00:00', versions: ['>=2.0.0', '<2.6.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/digital_signage_framework'

@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-115'
+title: 'LDAP / Active Directory Integration - Moderately critical - Information Disclosure - SA-CONTRIB-2026-115'
+branches:
+    2.2.x: { time: '2026-08-26 12:00:00', versions: ['>=2.0.0', '<2.2.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/ldap_auth'

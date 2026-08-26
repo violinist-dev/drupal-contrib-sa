@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-116'
+title: 'Monster Menus - Moderately critical - Cross-site Scripting - SA-CONTRIB-2026-116'
+branches:
+    9.5.x: { time: '2026-08-26 12:00:00', versions: ['>=9.0.0', '<9.5.3'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/monster_menus'
