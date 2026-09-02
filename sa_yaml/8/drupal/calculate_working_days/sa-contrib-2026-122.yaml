@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-122'
+title: 'Calculate Working Days - Critical - Access bypass - SA-CONTRIB-2026-122'
+branches:
+    2.0.x: { time: '2026-09-02 12:00:00', versions: ['>=2.0.0', '<2.0.3'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/calculate_working_days'

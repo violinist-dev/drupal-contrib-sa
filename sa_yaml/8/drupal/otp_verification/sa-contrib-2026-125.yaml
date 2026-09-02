@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-125'
+title: 'Email Verification / SMS Verification / OTP Verification - Critical - Cross Site Scripting - SA-CONTRIB-2026-125'
+branches:
+    2.4.x: { time: '2026-09-02 12:00:00', versions: ['>=2.0.0', '<2.4.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/otp_verification'

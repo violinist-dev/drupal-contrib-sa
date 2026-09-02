@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-131'
+title: 'PhotoSwipe - Responsive JavaScript Modal Image Gallery - Moderately critical - Cross-site scripting - SA-CONTRIB-2026-131'
+branches:
+    5.0.x: { time: '2026-09-02 12:00:00', versions: ['>=5.0.0', '<5.0.9'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/photoswipe'
