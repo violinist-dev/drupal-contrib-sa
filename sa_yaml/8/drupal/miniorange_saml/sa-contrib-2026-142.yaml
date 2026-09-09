@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-142'
+title: 'SAML SSO - Service Provider  - Critical - Improper certificate validation - SA-CONTRIB-2026-142'
+branches:
+    3.2.x: { time: '2026-09-09 12:00:00', versions: ['>=3.0.0', '<3.2.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/miniorange_saml'
