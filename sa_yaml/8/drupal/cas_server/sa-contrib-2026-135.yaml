@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2026-135'
+title: 'Central Authentication System (CAS) Server - Moderately critical - Open redirect - SA-CONTRIB-2026-135'
+branches:
+    2.0.x: { time: '2026-09-09 12:00:00', versions: ['>=2.0.0', '<2.0.4'] }
+    2.1.x: { time: '2026-09-09 12:00:00', versions: ['>=2.0.0', '<2.1.3'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/cas_server'
