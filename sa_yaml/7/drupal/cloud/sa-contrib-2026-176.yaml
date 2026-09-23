@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-176'
+title: 'Cloud - Critical - Remote code execution - SA-CONTRIB-2026-176'
+branches:
+    7.0.x: { time: '2026-09-23 12:00:00', versions: ['>=7.0.0', '<7.0.1'] }
+composer-repository: 'https://packages.drupal.org/7'
+reference: 'composer://drupal/cloud'

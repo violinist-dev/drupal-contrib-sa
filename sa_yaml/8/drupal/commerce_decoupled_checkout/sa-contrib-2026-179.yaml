@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-179'
+title: 'Commerce Decoupled Checkout - Moderately critical - Access bypass - SA-CONTRIB-2026-179'
+branches:
+    1.8.x: { time: '2026-09-23 12:00:00', versions: ['>=1.0.0', '<1.8.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/commerce_decoupled_checkout'

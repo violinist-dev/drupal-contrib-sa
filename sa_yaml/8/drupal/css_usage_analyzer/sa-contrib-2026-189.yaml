@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-189'
+title: 'CSS Usage Analyzer - Moderately critical - Improper access control - SA-CONTRIB-2026-189'
+branches:
+    1.0.x: { time: '2026-09-23 12:00:00', versions: ['>=1.0.0', '<1.0.2'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/css_usage_analyzer'
