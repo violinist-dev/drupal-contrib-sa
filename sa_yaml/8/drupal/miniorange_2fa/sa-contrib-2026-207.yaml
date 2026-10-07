@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2026-207'
+title: 'Two Factor Authentication - TFA / Passwordless Login - Moderately critical - Information disclosure - SA-CONTRIB-2026-207'
+branches:
+    5.5.x: { time: '2026-10-07 12:00:00', versions: ['>=5.0.0', '<5.5.2'] }
+    5.4.x: { time: '2026-10-07 12:00:00', versions: ['>=5.0.0', '<5.4.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/miniorange_2fa'
