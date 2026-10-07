@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-197'
+title: 'Authenticator Login Plus (2FA) - Critical - Improper authentication - SA-CONTRIB-2026-197'
+branches:
+    1.0.x: { time: '2026-10-07 12:00:00', versions: ['>=1.0.0', '<1.0.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/auth_login_plus'

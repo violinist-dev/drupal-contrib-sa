@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-204'
+title: 'Leaflet - Moderately critical - Cross site scripting - SA-CONTRIB-2026-204'
+branches:
+    10.4.x: { time: '2026-10-07 12:00:00', versions: ['>=10.0.0', '<10.4.13'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/leaflet'

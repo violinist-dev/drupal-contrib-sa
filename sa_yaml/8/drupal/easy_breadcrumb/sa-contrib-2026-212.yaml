@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-212'
+title: 'Easy Breadcrumb - Moderately critical - Information disclosure - SA-CONTRIB-2026-212'
+branches:
+    2.0.x: { time: '2026-10-07 12:00:00', versions: ['>=2.0.0', '<2.0.11'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/easy_breadcrumb'

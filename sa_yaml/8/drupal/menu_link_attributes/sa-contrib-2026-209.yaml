@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-209'
+title: 'Menu Link Attributes - Moderately critical - Cross-site scripting - SA-CONTRIB-2026-209'
+branches:
+    1.8.x: { time: '2026-10-07 12:00:00', versions: ['>=1.0.0', '<1.8.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/menu_link_attributes'
