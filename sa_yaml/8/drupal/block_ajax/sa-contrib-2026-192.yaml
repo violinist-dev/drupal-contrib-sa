@@ -1,5 +1,5 @@
 link: 'https://www.drupal.org/sa-contrib-2026-192'
-title: 'Block AJAX - Critical - PHP object injection - SA-CONTRIB-2026-192'
+title: 'Block AJAX - Highly critical - PHP object injection - SA-CONTRIB-2026-192'
 branches:
     3.0.x: { time: '2026-10-07 12:00:00', versions: ['>=3.0.0', '<3.0.2'] }
 composer-repository: 'https://packages.drupal.org/8'
