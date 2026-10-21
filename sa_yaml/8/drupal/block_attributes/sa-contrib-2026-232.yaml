@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-232'
+title: 'Block Attributes - Moderately critical - Cross site Scripting - SA-CONTRIB-2026-232'
+branches:
+    2.1.x: { time: '2026-10-21 12:00:00', versions: ['>=2.0.0', '<2.1.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/block_attributes'

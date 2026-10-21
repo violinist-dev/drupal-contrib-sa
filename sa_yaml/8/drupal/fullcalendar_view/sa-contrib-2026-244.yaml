@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-244'
+title: 'Fullcalendar View - Moderately critical - Access bypass - SA-CONTRIB-2026-244'
+branches:
+    5.2.x: { time: '2026-10-21 12:00:00', versions: ['>=5.0.0', '<5.2.6'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/fullcalendar_view'

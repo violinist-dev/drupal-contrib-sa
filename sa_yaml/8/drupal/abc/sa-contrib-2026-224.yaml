@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2026-224'
+title: 'ABC - Critical - Cross-site scripting - SA-CONTRIB-2026-224'
+branches:
+    1.25.x: { time: '2026-10-21 12:00:00', versions: ['>=1.0.0', '<1.25.0'] }
+    2.0.x: { time: '2026-10-21 12:00:00', versions: ['>=2.0.0', '<2.0.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/abc'
