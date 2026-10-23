@@ -3,5 +3,6 @@ composer.phar
 .idea
 /sa_yaml/undefined
 
-# Not interested
+# Not interested. These are distros.
 sa_yaml/8/drupal/thunder/sa-contrib-2023-007.yaml
+sa_yaml/8/drupal/sector/sa-contrib-2026-229.yaml

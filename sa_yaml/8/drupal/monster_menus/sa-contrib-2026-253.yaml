@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-253'
+title: 'Monster Menus - Critical - PHP object injection - SA-CONTRIB-2026-253'
+branches:
+    9.5.x: { time: '2026-10-21 12:00:00', versions: ['>=9.0.0', '<9.5.6'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/monster_menus'

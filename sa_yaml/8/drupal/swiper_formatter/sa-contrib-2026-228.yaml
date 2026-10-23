@@ -1,0 +1,7 @@
+link: 'https://www.drupal.org/sa-contrib-2026-228'
+title: 'Swiper formatter - Moderately critical - Cross-site scripting - SA-CONTRIB-2026-228'
+branches:
+    3.1.x: { time: '2026-10-21 12:00:00', versions: ['>=3.0.0', '<3.1.0'] }
+    2.1.x: { time: '2026-10-21 12:00:00', versions: ['>=2.0.0', '<2.1.2'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/swiper_formatter'

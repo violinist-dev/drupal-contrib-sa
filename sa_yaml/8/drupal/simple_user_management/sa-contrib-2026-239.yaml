@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-239'
+title: 'Simple User Management - Moderately critical - Access bypass - SA-CONTRIB-2026-239'
+branches:
+    1.11.x: { time: '2026-10-21 12:00:00', versions: ['>=1.0.0', '<1.11.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/simple_user_management'
