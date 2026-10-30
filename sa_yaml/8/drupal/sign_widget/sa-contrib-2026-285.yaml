@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-285'
+title: 'Signature pad widget - Critical - Cross-site scripting - SA-CONTRIB-2026-285'
+branches:
+    1.15.x: { time: '2026-10-28 12:00:00', versions: ['>=1.0.0', '<1.15.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/sign_widget'
