@@ -322,9 +322,16 @@ class ContribSaParser
 
     protected function getProjectNameFromLink($link)
     {
-        $parts = explode('/', $link);
+        $path = parse_url($link, PHP_URL_PATH) ?: $link;
+        $parts = explode('/', $path);
         $parts = array_filter($parts);
         $parts = array_values($parts);
+        // Links can point deeper into a project, for example
+        // https://git.drupalcode.org/project/s3fs/-/blob/8.x-3.12/README.txt.
+        $project_index = array_search('project', $parts);
+        if ($project_index !== false && isset($parts[$project_index + 1])) {
+            return $parts[$project_index + 1];
+        }
         return $parts[count($parts) - 1];
     }
 }
