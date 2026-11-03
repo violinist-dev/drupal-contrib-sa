@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-290'
+title: 'OAuth2 Token Manager - Critical - Access bypass - SA-CONTRIB-2026-290'
+branches:
+    1.2.x: { time: '2026-10-28 12:00:00', versions: ['>=1.0.0', '<1.2.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/oauth2_token_manager'

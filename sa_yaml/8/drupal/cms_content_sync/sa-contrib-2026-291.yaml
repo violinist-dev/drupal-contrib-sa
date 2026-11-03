@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-291'
+title: 'Content Sync (content-sync.io) - Moderately critical - Information disclosure - SA-CONTRIB-2026-291'
+branches:
+    3.2.x: { time: '2026-10-28 12:00:00', versions: ['>=3.0.0', '<3.2.2'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/cms_content_sync'
