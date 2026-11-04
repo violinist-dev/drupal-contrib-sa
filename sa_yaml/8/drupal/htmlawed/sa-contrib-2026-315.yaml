@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-315'
+title: 'htmLawed - Moderately critical - Cross-site scripting - SA-CONTRIB-2026-315'
+branches:
+    4.1.x: { time: '2026-11-04 12:00:00', versions: ['>=4.0.0', '<4.1.11'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/htmlawed'

@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-298'
+title: 'REST & JSON API Authentication for Drupal - Critical - Access bypass - SA-CONTRIB-2026-298'
+branches:
+    3.2.x: { time: '2026-11-04 12:00:00', versions: ['>=3.0.0', '<3.2.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/rest_api_authentication'

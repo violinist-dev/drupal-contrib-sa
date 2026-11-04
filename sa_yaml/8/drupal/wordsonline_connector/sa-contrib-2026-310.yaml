@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-310'
+title: 'WordsOnline Connector - Moderately critical - SQL injection - SA-CONTRIB-2026-310'
+branches:
+    2.0.x: { time: '2026-11-04 12:00:00', versions: ['>=2.0.0', '<2.0.6'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/wordsonline_connector'

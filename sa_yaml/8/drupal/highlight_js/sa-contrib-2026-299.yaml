@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-299'
+title: 'Highlight Js syntax highlighter - Critical - Cross-site scripting - SA-CONTRIB-2026-299'
+branches:
+    1.3.x: { time: '2026-11-04 12:00:00', versions: ['>=1.0.0', '<1.3.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/highlight_js'
