@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-305'
+title: 'Reset Password Email/SMS OTP - Critical - Access bypass - SA-CONTRIB-2026-305'
+branches:
+    1.0.x: { time: '2026-11-04 12:00:00', versions: ['>=1.0.0', '<1.0.5'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/reset_password_email_otp'

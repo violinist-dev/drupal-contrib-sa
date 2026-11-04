@@ -1,0 +1,8 @@
+link: 'https://www.drupal.org/sa-contrib-2026-296'
+title: 'Simple OAuth (OAuth2) & OpenID Connect - Critical - Access bypass - SA-CONTRIB-2026-296'
+branches:
+    6.1.x: { time: '2026-11-04 12:00:00', versions: ['>=6.0.0', '<6.1.4'] }
+    6.0.x: { time: '2026-11-04 12:00:00', versions: ['>=6.0.0', '<6.0.10'] }
+    5.2.x: { time: '2026-11-04 12:00:00', versions: ['>=5.0.0', '<5.2.6'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/simple_oauth'
