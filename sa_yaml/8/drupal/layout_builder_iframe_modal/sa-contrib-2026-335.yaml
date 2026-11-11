@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-335'
+title: 'Layout Builder iFrame Modal - Moderately critical - Cross-site scripting - SA-CONTRIB-2026-335'
+branches:
+    1.3.x: { time: '2026-11-11 12:00:00', versions: ['>=1.0.0', '<1.3.9'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/layout_builder_iframe_modal'

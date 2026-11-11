@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-329'
+title: 'Mollie for Drupal - Moderately critical - Information disclosure - SA-CONTRIB-2026-329'
+branches:
+    2.3.x: { time: '2026-11-11 12:00:00', versions: ['>=2.0.0', '<2.3.2'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/mollie'

@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-326'
+title: 'Campaign Monitor - Moderately critical - Cross-site request forgery - SA-CONTRIB-2026-326'
+branches:
+    3.0.x: { time: '2026-11-11 12:00:00', versions: ['>=3.0.0', '<3.0.3'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/campaignmonitor'

@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-317'
+title: 'Paragraphs Edit - Moderately critical - Improper authorization - SA-CONTRIB-2026-317'
+branches:
+    3.0.x: { time: '2026-11-11 12:00:00', versions: ['>=3.0.0', '<3.0.2'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/paragraphs_edit'
