@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-316'
+title: 'GraphQL Core Schema - Critical - Improper authorization - SA-CONTRIB-2026-316'
+branches:
+    1.0.x: { time: '2026-11-11 12:00:00', versions: ['>=1.0.0', '<1.0.29'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/graphql_core_schema'

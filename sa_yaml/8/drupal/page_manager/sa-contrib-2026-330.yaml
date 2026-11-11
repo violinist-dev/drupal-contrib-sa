@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-330'
+title: 'Page Manager - Moderately critical - Cross-site request forgery - SA-CONTRIB-2026-330'
+branches:
+    4.1.x: { time: '2026-11-11 12:00:00', versions: ['>=4.0.0', '<4.1.0'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/page_manager'

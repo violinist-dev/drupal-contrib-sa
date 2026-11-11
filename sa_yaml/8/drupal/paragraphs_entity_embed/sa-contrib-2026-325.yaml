@@ -1,0 +1,6 @@
+link: 'https://www.drupal.org/sa-contrib-2026-325'
+title: 'Paragraphs entity embed - Moderately critical - Cross-site scripting - SA-CONTRIB-2026-325'
+branches:
+    4.0.x: { time: '2026-11-11 12:00:00', versions: ['>=4.0.0', '<4.0.1'] }
+composer-repository: 'https://packages.drupal.org/8'
+reference: 'composer://drupal/paragraphs_entity_embed'
